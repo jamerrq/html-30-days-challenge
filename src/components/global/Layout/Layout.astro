@@ -40,6 +40,8 @@ const {
 // Components
 import { Background } from '@component/global'
 
+import Opulento from '../Background/Opulento'
+
 // Font imports
 import '@fontsource/source-sans-pro'
 import '@fontsource/poppins'
@@ -189,14 +191,11 @@ import Ascii from '@ascii/elephant.txt?raw'
   </head>
   <body class='flex min-h-screen w-full flex-col overflow-x-hidden'>
     <wc-toast class='w-180 mx-auto'></wc-toast>
-    <Background>
-      <main
-        class='flex h-[100%] w-full flex-1 items-center
-      justify-center'
-      >
-        <slot />
-      </main>
-    </Background>
+    <Opulento client:load />
+    <main class='flex h-[100%] w-full flex-1 items-center
+    justify-center'>
+      <slot />
+    </main>
     <script define:vars={{ Ascii }}>
       // This is a hack to get vite-plugin-pwa to generate a sw.js file.
       // Do not remove this script tag.
