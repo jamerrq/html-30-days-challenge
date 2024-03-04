@@ -1,0 +1,27 @@
+---
+import backgroundImage from '@img/background.webp'
+---
+
+<style>
+  .noise::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: '';
+    /* you can control opacity of noise  */
+    opacity: 0.05;
+    z-index: 1000;
+    pointer-events: none;
+    background: url(noise.gif);
+  }
+</style>
+
+<div
+  class='h-[100dvh] w-[100dvw] bg-cover bg-center'
+  style=`background-image: url(${backgroundImage.src}); absolute top-0 overflow-hidden`
+>
+  <div class='noise'></div>
+  <slot />
+</div>

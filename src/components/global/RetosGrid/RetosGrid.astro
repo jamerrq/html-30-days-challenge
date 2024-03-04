@@ -1,0 +1,49 @@
+---
+const completed = 5
+---
+
+<section class='mt-2 flex max-w-lg flex-wrap items-center justify-center'>
+  {
+    Array.from({ length: 30 }).map((_, index) =>
+      index < completed ? (
+        <button
+          type='button'
+          onclick={`window.location.href='/retos/${index + 1}'`}
+          class='mb-2 me-2 flex h-10 w-10
+        items-center justify-center rounded-lg bg-gradient-to-r from-green-400 via-green-500 to-green-600
+        px-5 py-2.5 text-center text-sm
+        font-bold text-white shadow-lg
+        shadow-green-500/50 hover:bg-gradient-to-br focus:outline-none
+        focus:ring-4 focus:ring-green-300 dark:shadow-lg
+        dark:shadow-green-800/80 dark:focus:ring-green-800'
+        >
+          #{index + 1}
+        </button>
+      ) : (
+        <button
+          type='button'
+          class='mb-2 me-2 flex h-10 w-10
+        items-center justify-center rounded-lg bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600
+        px-5 py-2.5 text-center text-sm
+        font-bold text-white shadow-lg
+        shadow-purple-500/50 hover:bg-gradient-to-br focus:outline-none
+        focus:ring-4 focus:ring-purple-300 dark:shadow-lg
+        dark:shadow-purple-800/80 dark:focus:ring-purple-800'
+          disabled
+        >
+          #{index + 1}
+        </button>
+      )
+    )
+  }
+  <aside class='mt-4 w-full'>
+    <div class='w-full rounded-full bg-purple-200 dark:bg-purple-700'>
+      <div
+        class='rounded-full bg-green-600 p-0.5 text-center text-xs font-bold leading-none text-green-100'
+        style={`width: ${Math.round((completed * 100) / 30)}%`}
+      >
+        {`${Math.round((completed * 100) / 30)}`}%
+      </div>
+    </div>
+  </aside>
+</section>

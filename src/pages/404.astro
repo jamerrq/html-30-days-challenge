@@ -1,0 +1,23 @@
+---
+import { Layout } from '@component/global'
+---
+
+<Layout title='Error 404'>
+  <main class='mx-auto flex w-full flex-col items-center justify-center'>
+    <img
+      src='https://media.tenor.com/fKIG2kiLVPgAAAAM/this-is-fine-its-fine.gif'
+      alt=''
+      class='rounded-full shadow-lg'
+    />
+    <h1 class='text-2xl font-bold text-white'>
+      La página que buscas no existe o no está disponible
+    </h1>
+    <button
+      onclick='window.history.back()'
+      type='button'
+      class='mb-2 me-2 rounded-lg bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 px-5 py-2.5 text-center text-sm font-medium text-gray-900 hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-red-100 dark:focus:ring-red-400'
+    >
+      Regresar
+    </button>
+  </main>
+</Layout>

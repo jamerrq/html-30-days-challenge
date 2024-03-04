@@ -1,0 +1,203 @@
+---
+// Component imports
+import { SEO, TwitterCardType } from 'astro-seo'
+
+// Style imports
+import '@style/tailwind.css'
+
+// Helper imports
+import { seoConfig } from '@util/seoConfig'
+
+// Props
+export interface Props {
+  /** Title of the page. */
+  title: string
+
+  /** Specific OpenGraph page title. */
+  ogTitle?: string
+
+  /** Description of the page. */
+  description?: string
+
+  /** Image thumbnail for the page. */
+  image?: {
+    url: string
+    alt: string
+  }
+
+  /** Whether or not to disable indexing */
+  disableIndexing?: boolean
+}
+
+const {
+  title,
+  ogTitle,
+  description,
+  image,
+  disableIndexing = false
+} = Astro.props as Props
+
+// Components
+import { Background } from '@component/global'
+
+// Font imports
+import '@fontsource/source-sans-pro'
+import '@fontsource/poppins'
+
+// View Transitions
+import { ViewTransitions } from 'astro:transitions'
+---
+
+<html lang='en'>
+  <head>
+    <!-- SEO. -->
+    <SEO
+      title={title}
+      description={seoConfig.description || description}
+      noindex={disableIndexing}
+      nofollow={disableIndexing}
+      openGraph={{
+        basic: {
+          title: ogTitle || title,
+          type: 'website',
+          image: seoConfig.image.url || image.url
+        },
+        image: {
+          width: seoConfig.image.width,
+          height: seoConfig.image.height,
+          alt: seoConfig.image.alt || image.alt
+        },
+        optional: {
+          siteName: seoConfig.siteName,
+          description: seoConfig.description || description
+        }
+      }}
+      twitter={{
+        card: seoConfig.twitter.card as TwitterCardType
+      }}
+    />
+
+    <!-- Global meta tags. -->
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+
+    <!-- Favicons. -->
+    <!-- 16 -->
+    <link
+      rel='icon'
+      type='image/png'
+      sizes='16x16'
+      href='/favicons/favicon-16x16.png'
+    />
+    <!-- 20 -->
+    <link
+      rel='icon'
+      type='image/png'
+      sizes='20x20'
+      href='/favicons/favicon-20x20.png'
+    />
+    <!-- 24 -->
+    <link
+      rel='icon'
+      type='image/png'
+      sizes='24x24'
+      href='/favicons/favicon-24x24.png'
+    />
+    <!-- 48 -->
+    <link
+      rel='icon'
+      type='image/png'
+      sizes='48x48'
+      href='/favicons/favicon-48x48.png'
+    />
+    <!-- 64 -->
+    <link
+      rel='icon'
+      type='image/png'
+      sizes='64x64'
+      href='/favicons/favicon-64x64.png'
+    />
+    <!-- 128 -->
+    <link
+      rel='icon'
+      type='image/png'
+      sizes='128x128'
+      href='/favicons/favicon-128x128.png'
+    />
+    <!-- 144 -->
+    <link
+      rel='icon'
+      type='image/png'
+      sizes='144x144'
+      href='/favicons/favicon-144x144.png'
+    />
+    <!-- 256 -->
+    <link
+      rel='icon'
+      type='image/png'
+      sizes='256x256'
+      href='/favicons/favicon-256x256.png'
+    />
+    <!-- 512 -->
+    <link
+      rel='icon'
+      type='image/png'
+      sizes='512x512'
+      href='/favicons/favicon-512x512.png'
+    />
+    <link
+      rel='shortcut icon'
+      type='image/x-icon'
+      href='/favicons/favicon.ico'
+    />
+    <link rel='icon' type='image/x-icon' href='/favicons/favicon.ico' />
+    <meta name='msapplication-TileColor' content='#333' />
+    <meta
+      name='msapplication-TileImage'
+      content='/favicons/favicon-144x144.png'
+    />
+    <meta name='msapplication-config' content='/browserconfig.xml' />
+    <link rel='icon' type='image/svg+xml' href='/favicons/favicon.svg' />
+    <meta name='theme-color' content='#333' />
+
+    <!-- Service worker registration. -->
+    <script is:inline src='/registerSW.js'></script>
+    <link rel='manifest' href='/manifest.webmanifest' />
+
+    <style is:global>
+      /* Global styles here */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: inherit;
+      }
+
+      * {
+        font-family: 'Source Sans Pro', sans-serif;
+      }
+
+      iframe {
+        border: none;
+      }
+    </style>
+    <ViewTransitions />
+  </head>
+  <body class='flex min-h-screen w-full flex-col overflow-x-hidden'>
+    <wc-toast class='w-180 mx-auto'></wc-toast>
+    <Background>
+      <main
+        class='flex h-[100%] w-full flex-1 items-center
+      justify-center'
+      >
+        <slot />
+      </main>
+    </Background>
+    <script>
+      // This is a hack to get vite-plugin-pwa to generate a sw.js file.
+      // Do not remove this script tag.
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "name": "html-30-days-with-manz",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "eslint --fix --ext .astro,.js,.ts . && prettier --write .",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@astrojs/sitemap": "^3.0.5",
+    "@astrojs/tailwind": "^5.1.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.1",
+    "astro": "4.3.6",
+    "astro-compress": "^2.2.10",
+    "astro-seo": "^0.8.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-astro": "^0.31.4",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "husky": "^9.0.11",
+    "prettier": "^3.2.5",
+    "prettier-config-standard": "^7.0.0",
+    "prettier-plugin-astro": "^0.13.0",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "tailwindcss-debug-screens": "^2.2.1",
+    "typescript": "^5.3.3",
+    "vite-plugin-pwa": "^0.18.1"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.21.0",
+    "@fontsource/poppins": "^5.0.12",
+    "@fontsource/source-sans-pro": "^5.0.8",
+    "wc-toast": "^1.3.1"
+  },
+  "type": "module"
+}
