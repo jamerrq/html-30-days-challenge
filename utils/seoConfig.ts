@@ -5,17 +5,17 @@ import type { ManifestOptions } from 'vite-plugin-pwa'
  * Defines the default SEO configuration for the website.
  */
 export const seoConfig = {
-  baseURL: 'https://example.com', // Change this to your production URL.
+  baseURL: 'https://html-30-days-challenge.vercel.app/',
   description:
-    'Astro PWA Starter is an opionated Astro starter for building robust static websites.', // Change this to be your website's description.
+    '30 retos de HTML por ManzDev',
   type: 'website',
   image: {
-    url: 'https://picsum.photos/1200/630', // Change this to your website's thumbnail.
-    alt: 'OpenGraph thumbnail description.', // Change this to your website's thumbnail description.
-    width: 1200,
-    height: 630
+    url: 'https://res.cloudinary.com/dm064xuo5/image/upload/f_auto,q_auto/v1/30-days-html/gozff6hffypeggec13vc',
+    alt: 'Site preview',
+    width: 1366,
+    height: 726
   },
-  siteName: 'Astro PWA Starter', // Change this to your website's name,
+  siteName: '30 días de HTML con ManzDev',
   twitter: {
     card: 'summary_large_image'
   }
@@ -25,9 +25,9 @@ export const seoConfig = {
  * Defines the configuration for PWA webmanifest.
  */
 export const manifest: Partial<ManifestOptions> = {
-  name: 'Laura Ebooks', // Change this to your website's name.
-  short_name: 'Lebooks', // Change this to your website's short name.
-  description: 'A short app from his nigg friend',
+  name: '30 días de HTML', // Change this to your website's name.
+  short_name: 'html-30-days', // Change this to your website's short name.
+  description: '30 retos de HTML por ManzDev',
   theme_color: '#2D3250', // Change this to your primary color.
   background_color: '#2D3250', // Change this to your background color.
   display: 'minimal-ui',
