@@ -10,8 +10,6 @@ body {
     rgba(238, 174, 202, 1) 0%,
     rgba(148, 187, 233, 1) 100%
   );
-  /* overflow: hidden; */
-  overflow: auto;
   scrollbar-width: thin;
   scrollbar-color: #f5f5f5 #f5f5f5;
   /* color: white; */

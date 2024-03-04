@@ -46,6 +46,8 @@ import '@fontsource/poppins'
 
 // View Transitions
 import { ViewTransitions } from 'astro:transitions'
+
+import Ascii from '@ascii/elephant.txt?raw'
 ---
 
 <html lang='en'>
@@ -195,9 +197,10 @@ import { ViewTransitions } from 'astro:transitions'
         <slot />
       </main>
     </Background>
-    <script>
+    <script define:vars={{ Ascii }}>
       // This is a hack to get vite-plugin-pwa to generate a sw.js file.
       // Do not remove this script tag.
+      console.log(Ascii)
     </script>
   </body>
 </html>
