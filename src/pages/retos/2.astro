@@ -7,7 +7,7 @@ import CSSSnippetRaw from 'src/retos/2/styles.css?raw'
 
 // insert the css into the html by replacing the <link> tag by a <style> tag
 const HTMLSnippet = HTMLSnippetRaw.replace(
-  /<link rel="stylesheet" href="styles.css">/,
+  /<link rel="stylesheet" href="styles.css" \/>/,
   `<style>${CSSSnippetRaw}</style>`
 )
 ---
