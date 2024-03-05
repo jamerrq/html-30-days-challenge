@@ -1,0 +1,111 @@
+---
+interface Props {
+  first?: boolean
+  last?: boolean
+  index: number
+  htmlRaw: string
+  cssRaw: string
+}
+
+const { first = false, last = false, index, htmlRaw, cssRaw } = Astro.props
+const htmlSnippet = htmlRaw.replace(
+  /<link rel="stylesheet" href="styles.css" \/>/,
+  `<style>${cssRaw}</style>`
+)
+
+import { Layout } from '@component/global'
+---
+
+<style>
+  section {
+    overflow: auto;
+    scrollbar-color: #333333 #111111;
+    scrollbar-width: thin;
+  }
+</style>
+
+<Layout title=`Día ${+index} - 30 días de HTML`>
+  <section class='relative h-full w-2/5 p-4 text-white'>
+    <button
+      onclick='window.location.href = "/"'
+      type='button'
+      class='absolute right-1 top-2 inline-flex items-center rounded-lg bg-gradient-to-r from-teal-500
+        to-blue-500 px-5 py-1 text-center text-sm font-medium
+        text-white hover:bg-gradient-to-bl focus:outline-none
+        focus:ring-4 focus:ring-teal-300 dark:focus:ring-teal-800'
+    >
+      <span>Volver</span>
+    </button>
+    <h1 class='text-2xl font-bold'>Día {+index}</h1>
+    <p>Crea una página HTML con código CSS desde un archivo diferente.</p>
+
+    <h2 class='mt-2 text-xl font-bold'>Soluciones</h2>
+    <!-- Code -->
+    <h3 class='w-full text-center italic'>index.html</h3>
+    <pre
+      class='overflow-x-auto rounded-md bg-gray-800 px-2 text-xs'>
+      <code class='language-html' data-lang='html'>{`\n${htmlRaw}`}</code>
+    </pre>
+    <h3 class='w-full text-center italic'>styles.css</h3>
+    <pre
+      class='mb-2 overflow-x-auto rounded-md bg-gray-800 px-2 text-xs'>
+      <code class='language-css' data-lang='css'>{`${cssRaw}`}</code>
+    </pre>
+    <footer
+      class='sticky bottom-0.5 flex w-full flex-row-reverse justify-between'
+    >
+      <button
+        type='button'
+        data-last={last}
+        onclick={`window.location.href='/retos/${index + 1}'`}
+        class='right-5 inline-flex items-center rounded-lg bg-blue-700 px-2 py-1 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 data-[last]:hidden dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+      >
+        Siguiente
+        <svg
+          class='ms-2 h-3.5 w-3.5 rtl:rotate-180'
+          aria-hidden='true'
+          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
+          viewBox='0 0 14 10'
+        >
+          <path
+            stroke='currentColor'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            stroke-width='2'
+            d='M1 5h12m0 0L9 1m4 4L9 9'></path>
+        </svg>
+      </button>
+      <button
+        data-first={first}
+        type='button'
+        onclick={`window.location.href='/retos/${index - 1}'`}
+        class='inline-flex items-center rounded-lg bg-blue-700 px-2 py-1 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 data-[first]:hidden dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+      >
+        <svg
+          class='me-2 h-3.5 w-3.5 rotate-180 rtl:rotate-180'
+          aria-hidden='true'
+          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
+          viewBox='0 0 14 10'
+        >
+          <path
+            stroke='currentColor'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            stroke-width='2'
+            d='M1 5h12m0 0L9 1m4 4L9 9'></path>
+        </svg>
+        Anterior
+      </button>
+    </footer>
+  </section>
+  <section class='relative flex h-full w-3/5 flex-col border-r-2'>
+    <span
+      class='absolute right-2 top-2 me-2 rounded-full bg-pink-100 px-2.5 py-0.5 text-xs font-bold text-pink-800 dark:bg-pink-900 dark:text-pink-300'
+    >
+      Demo
+    </span>
+    <iframe class='grow' srcdoc={htmlSnippet}></iframe>
+  </section>
+</Layout>

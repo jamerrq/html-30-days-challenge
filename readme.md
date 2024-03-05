@@ -23,4 +23,4 @@ https://lenguajehtml.com/challenge/
 
 ## Other tasks
 
-- [ ] Modularize challenge creation (don't repeat yourself)
+- [X] Modularize challenge creation (don't repeat yourself)
