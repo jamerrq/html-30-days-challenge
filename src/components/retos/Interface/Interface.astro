@@ -2,7 +2,7 @@
 interface Props {
   first?: boolean
   last?: boolean
-  description: string
+  // description: string
   level?: 0 | 1 | 2
   index: number
   htmlRaw: string
@@ -14,7 +14,7 @@ const {
   last = false,
   level = 0,
   index,
-  description,
+  // description,
   htmlRaw,
   cssRaw
 } = Astro.props
@@ -25,6 +25,7 @@ const htmlSnippet = htmlRaw.replace(
 )
 
 import { Layout } from '@component/global'
+import DESCRIPTIONS from './descriptions'
 ---
 
 <style>
@@ -49,7 +50,7 @@ import { Layout } from '@component/global'
     </button>
     <h1 class='text-2xl font-bold'>Día {+index}</h1>
     <p>
-      {description}
+      {DESCRIPTIONS[index]}
     </p>
     <h2
       data-easy={level === 0}
