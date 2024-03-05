@@ -4,7 +4,9 @@
     "editor.defaultFormatter": "astro-build.astro-vscode"
   },
   // Disable the default formatter, use eslint instead
-  "prettier.documentSelectors": ["**/*.astro"],
+  "prettier.documentSelectors": [
+    "**/*.astro"
+  ],
   "editor.formatOnSave": true,
   // Auto fix
   "editor.codeActionsOnSave": {
@@ -61,7 +63,6 @@
     "typescript",
     "typescriptreact",
     "vue",
-    "markdown",
     "json",
     "jsonc",
     "yaml",

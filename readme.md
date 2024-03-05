@@ -13,3 +13,14 @@
 https://lenguajehtml.com/challenge/
 
 </div>
+
+## UI Tasks
+
+- [ ] Prev and Next Challenge
+- [ ] Mobile Design (?)
+- [ ] Resizable Preview window
+- [ ] Level display
+
+## Other tasks
+
+- [ ] Modularize challenge creation (don't repeat yourself)
