@@ -16,10 +16,10 @@ https://lenguajehtml.com/challenge/
 
 ## UI Tasks
 
-- [ ] Prev and Next Challenge
+- [X] Prev and Next Challenge
 - [ ] Mobile Design (?)
 - [ ] Resizable Preview window
-- [ ] Level display
+- [X] Level display
 
 ## Other tasks
 
