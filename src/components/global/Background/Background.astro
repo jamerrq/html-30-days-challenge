@@ -12,16 +12,15 @@ import backgroundImage from '@img/background.webp'
     content: '';
     /* you can control opacity of noise  */
     opacity: 0.05;
-    z-index: 1000;
+    z-index: -50;
     pointer-events: none;
     background: url(noise.gif);
   }
 </style>
 
 <div
-  class='h-[100dvh] w-[100dvw] bg-cover bg-center'
+  class='absolute top-0 -z-50 h-[100dvh] w-[100dvw] bg-cover bg-center'
   style=`background-image: url(${backgroundImage.src}); absolute top-0 overflow-hidden`
 >
   <div class='noise'></div>
-  <slot />
 </div>

@@ -33,6 +33,8 @@
   },
   "dependencies": {
     "@astrojs/starlight": "^0.21.0",
+    "@fontsource/bungee-hairline": "^5.0.19",
+    "@fontsource/bungee-shade": "^5.0.19",
     "@fontsource/poppins": "^5.0.12",
     "@fontsource/source-sans-pro": "^5.0.8",
     "wc-toast": "^1.3.1"

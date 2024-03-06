@@ -20,6 +20,7 @@ https://lenguajehtml.com/challenge/
 - [ ] Mobile Design (?)
 - [ ] Resizable Preview window
 - [x] Level display
+- [ ] Synthax Highlighting
 
 ## Other tasks
 

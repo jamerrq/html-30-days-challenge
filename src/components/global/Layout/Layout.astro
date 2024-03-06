@@ -43,6 +43,8 @@ import { Background } from '@component/global'
 // Font imports
 import '@fontsource/source-sans-pro'
 import '@fontsource/poppins'
+// import '@fontsource/bungee-shade'
+import '@fontsource/bungee-hairline'
 
 // View Transitions
 import { ViewTransitions } from 'astro:transitions'
@@ -184,19 +186,22 @@ import Ascii from '@ascii/elephant.txt?raw'
       iframe {
         border: none;
       }
+
+      #title,
+      #subtitle,
+      #manz {
+        font-family: 'Bungee Hairline', system-ui;
+      }
     </style>
     <ViewTransitions />
   </head>
   <body class='flex min-h-screen w-full flex-col overflow-x-hidden'>
     <wc-toast class='w-180 mx-auto'></wc-toast>
-    <Background>
-      <main
-        class='flex h-[100%] w-full flex-1 items-center
-      justify-center'
-      >
-        <slot />
-      </main>
-    </Background>
+    <Background />
+    <main class='flex h-[100%] w-full flex-1 items-center
+      justify-center'>
+      <slot />
+    </main>
     <script define:vars={{ Ascii }}>
       // This is a hack to get vite-plugin-pwa to generate a sw.js file.
       // Do not remove this script tag.
