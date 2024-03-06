@@ -40,7 +40,10 @@
       ],
       "@ascii/*": [
         "src/assets/ascii/*"
-      ],
+      ]
     }
-  }
+  },
+  "exclude": [
+    "dist"
+  ]
 }

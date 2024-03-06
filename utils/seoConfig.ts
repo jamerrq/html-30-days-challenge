@@ -6,8 +6,7 @@ import type { ManifestOptions } from 'vite-plugin-pwa'
  */
 export const seoConfig = {
   baseURL: 'https://html-30-days-challenge.vercel.app/',
-  description:
-    '30 retos de HTML por ManzDev',
+  description: '30 retos de HTML por ManzDev',
   type: 'website',
   image: {
     url: 'https://res.cloudinary.com/dm064xuo5/image/upload/f_auto,q_auto/v1/30-days-html/gozff6hffypeggec13vc',
