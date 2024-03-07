@@ -49,17 +49,25 @@ import DESCRIPTIONS from './descriptions'
       <span>Volver</span>
     </button>
     <h1 class='text-2xl font-bold'>Día {+index}</h1>
-    <p>
+    <p class='mb-2'>
       {DESCRIPTIONS[index]}
     </p>
-    <h2
+    <!-- <h2
       data-easy={level === 0}
       data-medium={level === 1}
       data-hard={level === 2}
       class='mt-2 text-base font-bold data-[easy]:text-green-300 data-[hard]:text-red-300 data-[medium]:text-orange-300'
     >
       Dificultad: {level === 0 ? 'Fácil' : level === 1 ? 'Medio' : 'Difícil'}
-    </h2>
+    </h2> -->
+    <span
+      data-easy={level === 0}
+      data-medium={level === 1}
+      data-hard={level === 2}
+      class='mt-4 rounded-full bg-pink-100 px-2.5 py-0.5 text-xs font-bold text-pink-800 data-[easy]:bg-green-100 data-[hard]:bg-red-100 data-[medium]:bg-orange-100 data-[easy]:text-green-800 data-[hard]:text-red-800 data-[medium]:text-orange-800 dark:bg-pink-900 dark:text-pink-300'
+    >
+      Dificultad: {level === 0 ? 'Fácil' : level === 1 ? 'Medio' : 'Difícil'}
+    </span>
     <h2 class='mt-2 text-xl font-bold'>Soluciones</h2>
     <h3 class='w-full text-center italic'>index.html</h3>
     <pre
@@ -78,11 +86,10 @@ import DESCRIPTIONS from './descriptions'
         type='button'
         data-last={last}
         onclick={`window.location.href='/retos/${index + 1}'`}
-        class='right-5 inline-flex items-center rounded-lg bg-blue-700 px-2 py-1 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 data-[last]:hidden dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+        class='inline-flex items-center rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-2 py-1 text-center text-sm font-medium text-white shadow-lg shadow-black hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-blue-300 data-[last]:hidden dark:focus:ring-blue-800'
       >
-        Siguiente
         <svg
-          class='ms-2 h-3.5 w-3.5 rtl:rotate-180'
+          class='h-3.5 w-3.5 rtl:rotate-180'
           aria-hidden='true'
           xmlns='http://www.w3.org/2000/svg'
           fill='none'
@@ -100,10 +107,10 @@ import DESCRIPTIONS from './descriptions'
         data-first={first}
         type='button'
         onclick={`window.location.href='/retos/${index - 1}'`}
-        class='inline-flex items-center rounded-lg bg-blue-700 px-2 py-1 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 data-[first]:hidden dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+        class='inline-flex items-center rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-2 py-1 text-center text-sm font-medium text-white shadow-lg shadow-black hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-blue-300 data-[first]:hidden dark:focus:ring-blue-800'
       >
         <svg
-          class='me-2 h-3.5 w-3.5 rotate-180 rtl:rotate-180'
+          class='h-3.5 w-3.5 rotate-180 rtl:rotate-180'
           aria-hidden='true'
           xmlns='http://www.w3.org/2000/svg'
           fill='none'
@@ -116,7 +123,6 @@ import DESCRIPTIONS from './descriptions'
             stroke-width='2'
             d='M1 5h12m0 0L9 1m4 4L9 9'></path>
         </svg>
-        Anterior
       </button>
     </footer>
   </section>

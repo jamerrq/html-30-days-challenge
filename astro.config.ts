@@ -9,10 +9,12 @@ import { VitePWA } from 'vite-plugin-pwa'
 // Helper imports
 import { manifest, seoConfig } from './utils/seoConfig'
 
+import react from '@astrojs/react'
+
 // https://astro.build/config
 export default defineConfig({
   site: seoConfig.baseURL,
-  integrations: [tailwind(), sitemap(), compress()],
+  integrations: [tailwind(), sitemap(), compress(), react()],
   vite: {
     plugins: [
       VitePWA({

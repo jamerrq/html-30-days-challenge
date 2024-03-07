@@ -1,0 +1,11 @@
+---
+import { Layout } from '@component/global'
+import htmlRaw from '../retos/1/index.html?raw'
+---
+
+<Layout title='Board'>
+  <pre
+    class='overflow-x-auto px-2 text-xs'>
+      <code class='language-html' data-lang='html'>{`\n${htmlRaw}`}</code>
+    </pre>
+</Layout>

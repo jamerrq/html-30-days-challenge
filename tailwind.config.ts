@@ -1,3 +1,5 @@
+import animations from '@midudev/tailwind-animations'
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{astro,html,jsx,tsx,svelte,vue,js,ts}'],
@@ -21,5 +23,9 @@ export default {
       }
     }
   },
-  plugins: ['tailwindcss-debug-screens']
+  plugins: [
+    require('tailwindcss-debug-screens'),
+    'prettier-plugin-tailwindcss',
+    animations
+  ]
 }

@@ -36,14 +36,13 @@ const completed = 5
       )
     )
   }
-  <aside class='group mt-4 w-full'>
+  <aside class='group mt-4 w-full animate-fade-in-left animate-steps-retro'>
     <div class='w-full rounded-full bg-purple-200 dark:bg-purple-700'>
       <div
-        class='rounded-full bg-green-600 p-0.5 text-center text-sm font-bold leading-none text-white'
+        class='animate-slide-in-left rounded-full bg-green-600 p-0.5 text-center text-sm font-bold leading-none text-white animate-delay-300 animate-duration-slower'
         style={`width: ${Math.round((completed * 100) / 30)}%`}
       >
-        <span
-          class='hidden transition-all duration-1000 ease-in-out group-hover:block'
+        <span class='transition-all duration-1000 ease-in-out group-hover:block'
           >{`${Math.round((completed * 100) / 30)}%`}</span
         >
       </div>

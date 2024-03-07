@@ -43,8 +43,12 @@ import { Background } from '@component/global'
 // Font imports
 import '@fontsource/source-sans-pro'
 import '@fontsource/poppins'
-// import '@fontsource/bungee-shade'
+import '@fontsource/bungee-shade'
 import '@fontsource/bungee-hairline'
+import '@fontsource/fira-mono'
+
+// Code Styles
+import '@style/code.css'
 
 // View Transitions
 import { ViewTransitions } from 'astro:transitions'
@@ -187,15 +191,34 @@ import Ascii from '@ascii/elephant.txt?raw'
         border: none;
       }
 
-      #title,
+      #title {
+        font-family: 'Bungee Shade', system-ui;
+      }
       #subtitle,
       #manz {
         font-family: 'Bungee Hairline', system-ui;
       }
     </style>
+    <script
+      is:inline
+      src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js'
+    ></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script
+      is:inline
+      src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js'
+    ></script>
+
+    <script is:inline>
+      hljs.highlightAll()
+    </script>
     <ViewTransitions />
   </head>
-  <body class='flex min-h-screen w-full flex-col overflow-x-hidden'>
+  <body
+    data-dev={import.meta.env.DEV}
+    class='debug-screens flex min-h-screen w-full flex-col overflow-x-hidden'
+  >
     <wc-toast class='w-180 mx-auto'></wc-toast>
     <Background />
     <main class='flex h-[100%] w-full flex-1 items-center
