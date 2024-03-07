@@ -9,10 +9,10 @@ export const seoConfig = {
   description: '30 retos de HTML por ManzDev',
   type: 'website',
   image: {
-    url: 'https://res.cloudinary.com/dm064xuo5/image/upload/f_auto,q_auto/v1/30-days-html/gozff6hffypeggec13vc',
+    url: 'https://html-30-days-challenge.vercel.app/app.png',
     alt: 'Site preview',
     width: 1366,
-    height: 726
+    height: 748
   },
   siteName: '30 días de HTML con ManzDev',
   twitter: {
