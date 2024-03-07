@@ -54,6 +54,6 @@ echo -e "\e[32m ✓ Astro page created\e[0m"
 
 # Replace #N with the challenge number
 
-sed -i "s/#N/$challenge_number/g" src/pages/$challenge_number.astro
+sed -i "s/#N/$challenge_number/g" src/pages/retos/$challenge_number.astro
 
 echo -e "\e[32m *** Process completed [$challenge_number] ***\e[0m"
