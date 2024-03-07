@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reto 6</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <!-- Crea un grupo de secciones (acordeón) donde se despliegue sólo uno a la vez. -->
+
+  <body>
+    <header>
+      <h1>Reto #6</h1>
+    </header>
+    <main>
+      <details id="acc-1" closed>
+        <summary>1. Es Linux el MVP de los OS?</summary>
+        Respuesta corta: sí, respuesta larga: sin duda.
+      </details>
+      <details id="acc-2" closed>
+        <summary>2. Y de los lenguajes de programación cuál es el MVP?</summary>
+        Respuesta corta: no, respuesta larga: Fortran y Haskell compiten.
+      </details>
+      <details id="acc-3" open>
+        <summary>3. Algún Framework (JS) que merezca ser mencionado?</summary>
+        Respuesta corta: Astro sin duda, respuesta larga: Astro, Nest.js y
+        Next.js 🤌.
+      </details>
+      <details id="acc-4" closed>
+        <summary>
+          4. Mejor empresa en cuánto a toma de decisiones a futuro (o en
+          general)
+        </summary>
+        Respuesta corta: microsoft, respuesta larga: Meta no, Microsoft.
+      </details>
+    </main>
+    <script is:inline>
+      // Source: https://getbutterfly.com/how-to-open-only-one-details-summary-element-at-a-time/
+      if (document.querySelector('details')) {
+        // Fetch all the details elements
+        const details = document.querySelectorAll('details')
+
+        // Add onclick listeners
+        details.forEach((targetDetail) => {
+          targetDetail.addEventListener('click', () => {
+            // Close all details that are not targetDetail
+            details.forEach((detail) => {
+              if (detail !== targetDetail) {
+                detail.removeAttribute('open')
+              }
+            })
+          })
+        })
+      }
+    </script>
+  </body>
+</html>

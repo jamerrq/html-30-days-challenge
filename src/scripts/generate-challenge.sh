@@ -20,6 +20,7 @@ else
   else
     echo -e "\e[31m ✗ Process aborted\e[0m"
     exit 1
+  fi
 fi
 
 # Create index.html and styles.css files inside src/retos/$challenge_number
@@ -47,7 +48,7 @@ fi
 
 # Create the Astro page for the challenge
 
-cp src/retos/templates/template.Astro src/pages/$challenge_number.astro
+cp src/retos/templates/template.Astro src/pages/retos/$challenge_number.astro
 
 echo -e "\e[32m ✓ Astro page created\e[0m"
 
