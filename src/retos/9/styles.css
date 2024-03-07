@@ -1,26 +1,26 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: inherit;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url('https://tiendapapel.pochteca.com.mx/media/wysiwyg/el_papel_pergamino.jpg');
-    overflow: hidden;
-    padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://tiendapapel.pochteca.com.mx/media/wysiwyg/el_papel_pergamino.jpg');
+  overflow: hidden;
+  padding: 5rem;
 }
 
 ol {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }

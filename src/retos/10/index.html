@@ -1,43 +1,47 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>Reto 10</title>
     <link rel="stylesheet" href="styles.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="youtube-player pristine" data-video-id="dQw4w9WgXcQ">
-        <img src="https://pbs.twimg.com/media/GH3VaezW8AAiKjJ?format=png&name=small" alt="custom-preview">
+      <img
+        src="https://pbs.twimg.com/media/GH3VaezW8AAiKjJ?format=png&name=small"
+        alt="custom-preview"
+      />
     </div>
     <script is:inline>
-        var players = document.querySelectorAll('.youtube-player')
+      var players = document.querySelectorAll('.youtube-player')
 
-        var loadPlayer = function (event) {
-            var target = event.currentTarget
-            var iframe = document.createElement('iframe')
+      var loadPlayer = function (event) {
+        var target = event.currentTarget
+        var iframe = document.createElement('iframe')
 
-            iframe.height = target.clientHeight
-            iframe.width = target.clientWidth
-            iframe.src = 'https://www.youtube.com/embed/' + target.dataset.videoId + '?autoplay=1'
-            iframe.setAttribute('frameborder', 0)
+        iframe.height = target.clientHeight
+        iframe.width = target.clientWidth
+        iframe.src =
+          'https://www.youtube.com/embed/' +
+          target.dataset.videoId +
+          '?autoplay=1'
+        iframe.setAttribute('frameborder', 0)
 
-            target.classList.remove('pristine')
+        target.classList.remove('pristine')
 
-            if (target.children.length) {
-                target.replaceChild(iframe, target.firstElementChild)
-            } else {
-                target.appendChild(iframe)
-            }
+        if (target.children.length) {
+          target.replaceChild(iframe, target.firstElementChild)
+        } else {
+          target.appendChild(iframe)
         }
+      }
 
-        var config = { once: true }
+      var config = { once: true }
 
-        Array.from(players).forEach(function (player) {
-            player.addEventListener('click', loadPlayer, config)
-        })
+      Array.from(players).forEach(function (player) {
+        player.addEventListener('click', loadPlayer, config)
+      })
     </script>
-</body>
-
+  </body>
 </html>

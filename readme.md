@@ -2,7 +2,7 @@
 
 # HTML 30-day challenge
 
-![](https://lenguajehtml.com/challenge/logo.png)
+![alt text](public/app.png)
 
 ![](https://img.shields.io/badge/HTML-5-orange?style=for-the-badge&logo=html5)
 ![](https://img.shields.io/badge/CSS-3-blue?style=for-the-badge&logo=css3)
@@ -20,7 +20,7 @@ https://lenguajehtml.com/challenge/
 - [ ] Mobile Design (?)
 - [ ] Resizable Preview window
 - [x] Level display
-- [ ] Synthax Highlighting
+- [x] Synthax Highlighting
 
 ## Other tasks
 
