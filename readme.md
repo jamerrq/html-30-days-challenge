@@ -17,8 +17,8 @@ https://lenguajehtml.com/challenge/
 ## UI Tasks
 
 - [x] Prev and Next Challenge
-- [ ] Mobile Design (?)
-- [ ] Resizable Preview window
+- [x] Mobile Design (?)
+- [x] Resizable Preview window
 - [x] Level display
 - [x] Synthax Highlighting
 
