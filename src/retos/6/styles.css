@@ -19,8 +19,10 @@ body {
     rgba(238, 174, 202, 1) 0%,
     rgba(148, 187, 233, 1) 100%
   );
-  overflow: hidden;
+  overflow: auto;
   font-family: monospace;
+  padding-inline: 2rem;
+  padding-block: 8rem;
 }
 
 header {
@@ -30,10 +32,15 @@ header {
 main {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 details {
-  width: 500px;
+  width: 80%;
   height: 30px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: grey black;
 }

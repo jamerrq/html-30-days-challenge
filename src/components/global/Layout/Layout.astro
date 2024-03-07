@@ -38,7 +38,7 @@ const {
 } = Astro.props as Props
 
 // Components
-import { Background } from '@component/global'
+import { Background, Portal } from '@component/global'
 
 // Font imports
 import '@fontsource/source-sans-pro'
@@ -196,6 +196,7 @@ import Ascii from '@ascii/elephant.txt?raw'
         font-family: 'Bungee Shade', system-ui;
       }
       #subtitle,
+      #jamerrq,
       #manz {
         font-family: 'Bungee Hairline', system-ui;
       }
@@ -218,12 +219,15 @@ import Ascii from '@ascii/elephant.txt?raw'
   </head>
   <body
     data-dev={import.meta.env.DEV}
-    class='flex min-h-screen w-full flex-col overflow-x-hidden data-[dev]:debug-screens'
+    class='flex max-h-screen w-screen flex-col overflow-x-hidden data-[dev]:debug-screens'
   >
     <wc-toast class='w-180 mx-auto'></wc-toast>
     <Background />
-    <main class='flex h-[100%] w-full flex-1 items-center
-      justify-center'>
+    <Portal />
+    <main
+      class='flex max-h-screen w-screen flex-1 items-center justify-center
+      overflow-hidden'
+    >
       <slot />
     </main>
     <script define:vars={{ Ascii }}>

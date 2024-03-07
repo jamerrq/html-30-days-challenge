@@ -16,7 +16,14 @@ body {
   scrollbar-color: #f5f5f5 #f5f5f5;
   /* color: white; */
   margin: 0;
-  padding: 2rem;
+  padding-inline: 2rem;
+  padding-block: 8rem;
   font-family: monospace;
-  overflow: hidden;
+  overflow: auto;
+  max-height: fit-content;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: grey black;
 }
