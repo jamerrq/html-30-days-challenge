@@ -29,3 +29,9 @@ xmp:first-of-type {
 xmp:nth-of-type(2) {
   color: yellowgreen;
 }
+
+@media screen and (max-width: 420px) {
+  body {
+    font-size: 0.5rem;
+  }
+}
