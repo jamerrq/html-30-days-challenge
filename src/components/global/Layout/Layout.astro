@@ -169,8 +169,14 @@ import Ascii from '@ascii/elephant.txt?raw'
     <meta name='theme-color' content='#333' />
 
     <!-- Service worker registration. -->
-    <script is:inline src='/registerSW.js'></script>
-    <link rel='manifest' href='/manifest.webmanifest' />
+    {
+      !import.meta.env.DEV && (
+        <>
+          <script is:inline src='/registerSW.js' />
+          <link rel='manifest' href='/manifest.webmanifest' />
+        </>
+      )
+    }
 
     <style is:global>
       /* Global styles here */
@@ -223,7 +229,7 @@ import Ascii from '@ascii/elephant.txt?raw'
   >
     <wc-toast class='w-180 mx-auto'></wc-toast>
     <Background />
-    <Portal />
+    {import.meta.env.DEV && <Portal />}
     <main
       class='flex max-h-screen w-screen flex-1 items-center justify-center
       overflow-hidden'

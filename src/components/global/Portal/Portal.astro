@@ -1,4 +1,7 @@
-<a href={Astro.url.href.split('/').at(-1) === 'board' ? '/' : '/board'}>
+<a
+  href={Astro.url.href.split('/').at(-1) === 'board' ? '/' : '/board'}
+  aria-label='board/home'
+>
   <span
     data-nodev={!import.meta.env.DEV}
     class='absolute bottom-2 left-2 me-2 rounded-full bg-pink-100 px-2.5 py-0.5 text-xs font-bold text-pink-800 data-[nodev]:hidden dark:bg-pink-900 dark:text-pink-300'

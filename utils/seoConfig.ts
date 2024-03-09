@@ -29,7 +29,7 @@ export const manifest: Partial<ManifestOptions> = {
   description: '30 retos de HTML por ManzDev',
   theme_color: '#2D3250', // Change this to your primary color.
   background_color: '#2D3250', // Change this to your background color.
-  display: 'minimal-ui',
+  display: 'fullscreen',
   icons: [
     {
       src: '/favicons/favicon-192x192.png',

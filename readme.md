@@ -2,7 +2,11 @@
 
 # HTML 30-day challenge
 
-![alt text](public/app.png)
+[![alt text](public/app.png)](https://html-30-days-challenge.vercel.app/)
+
+## Powered by
+
+[Lumina](https://github.com/jamerrq/lumina) - Minimalist PWA Astro Starter Template
 
 ![](https://img.shields.io/badge/HTML-5-orange?style=for-the-badge&logo=html5)
 ![](https://img.shields.io/badge/CSS-3-blue?style=for-the-badge&logo=css3)
@@ -17,11 +21,13 @@ https://lenguajehtml.com/challenge/
 ## UI Tasks
 
 - [x] Prev and Next Challenge
-- [x] Mobile Design (?)
+- [ ] Mobile Design (Need changes)
 - [x] Resizable Preview window
 - [x] Level display
 - [x] Synthax Highlighting
+- [ ] Copy code buttons
 
 ## Other tasks
 
 - [x] Modularize challenge creation (don't repeat yourself)
+- [ ] Improve lighthouse metrics
