@@ -12,22 +12,34 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
+  color: white;
   background: black;
   overflow: auto;
+  padding: 2rem;
 }
 
-xmp {
+pre {
   font-family: monospace;
   font-weight: bold;
 }
 
-xmp:first-of-type {
+pre:first-of-type {
   color: brown;
 }
 
-xmp:nth-of-type(2) {
+pre:nth-of-type(2) {
   color: yellowgreen;
+}
+
+p {
+  font-size: 1.5rem;
+  font-family: monospace;
+  font-weight: bold;
+  color: green;
+}
+
+span {
+  color: gold;
 }
 
 @media screen and (max-width: 420px) {

@@ -23,6 +23,7 @@ body {
   font-family: monospace;
   padding-inline: 2rem;
   padding-block: 4rem;
+  font-weight: bold;
 }
 
 header {
@@ -31,13 +32,16 @@ header {
 
 main {
   display: flex;
-  flex-direction: column;
-  gap: 4rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 details {
-  width: 400px;
-  height: 30px;
+  width: 40%;
+  margin-inline: auto;
+  height: 120px;
+  padding: 0rem;
 }
 
 * {

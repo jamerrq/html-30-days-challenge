@@ -4,6 +4,8 @@
 
 [![alt text](public/app.png)](https://html-30-days-challenge.vercel.app/)
 
+![progres-bar](https://progress-bar.dev/33/?title=completed&width=350)
+
 ## Powered by
 
 [Lumina](https://github.com/jamerrq/lumina) - Minimalist PWA Astro Starter Template
@@ -21,13 +23,19 @@ https://lenguajehtml.com/challenge/
 ## UI Tasks
 
 - [x] Prev and Next Challenge
-- [ ] Mobile Design (Need changes)
+- [x] Mobile Design (Need changes)
 - [x] Resizable Preview window
 - [x] Level display
 - [x] Synthax Highlighting
-- [ ] Copy code buttons
+- [x] Copy code buttons
 
 ## Other tasks
 
 - [x] Modularize challenge creation (don't repeat yourself)
-- [ ] Improve lighthouse metrics
+- [x] Improve lighthouse metrics
+
+## Some references
+
+- [Nu HTML Checker](https://validator.w3.org/nu/)
+- [JPEG XL Viewer (Chromium Extension)](https://chromewebstore.google.com/detail/jpeg-xl-viewer/bkhdlfmkaenamnlbpdfplekldlnghchp)
+- [Pre Tag MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre)
