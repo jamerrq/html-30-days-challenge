@@ -2,10 +2,19 @@
 const inBoard = Astro.url.href.split('/').at(-1) === 'board'
 ---
 
+<button onclick='window.history.back()'>
+  <span
+    data-nodev={!import.meta.env.DEV}
+    class='absolute bottom-14 right-1 z-50 rounded-full bg-indigo-100 px-2.5 py-0.5 text-xs font-bold text-pink-800 shadow shadow-black data-[nodev]:hidden dark:bg-indigo-900 dark:text-pink-300'
+  >
+    ⬅️
+  </span>
+</button>
+
 <a href={inBoard ? '/' : '/board'} aria-label='board/home'>
   <span
     data-nodev={!import.meta.env.DEV}
-    class='absolute bottom-7 right-1 z-50 rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-bold text-pink-800 data-[nodev]:hidden dark:bg-emerald-900 dark:text-pink-300'
+    class='absolute bottom-7 right-1 z-50 rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-bold text-pink-800 shadow shadow-black data-[nodev]:hidden dark:bg-emerald-900 dark:text-pink-300'
   >
     {inBoard ? '🏠' : '📋'}
   </span>

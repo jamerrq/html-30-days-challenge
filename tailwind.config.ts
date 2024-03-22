@@ -4,6 +4,9 @@ import animations from '@midudev/tailwind-animations'
 export default {
   content: ['./src/**/*.{astro,html,jsx,tsx,svelte,vue,js,ts}'],
   theme: {
+    fontFamily: {
+      fredericka: ['Fredericka the Great', 'system-ui']
+    },
     debugScreens: {
       style: {
         backgroundColor: 'white',
@@ -13,8 +16,8 @@ export default {
         fontFamily: 'monospace',
         fontSize: '10px',
         fontWeight: 'bold',
-        margin: '5px'
-        // ...
+        margin: '5px',
+        boxSizing: 'borderBox'
       },
       position: ['bottom', 'right']
     },

@@ -3,7 +3,248 @@ import { Layout } from '@component/global'
 ---
 
 <Layout title='Board'>
-  <main class='flex h-screen w-screen items-center justify-center'>
-    <h1 id='title' class='text-5xl text-white'>Board</h1>
+  <style>
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: gray black;
+    }
+
+    #tv-frame {
+      width: 300px;
+      height: 200px;
+      background-color: brown;
+      border-radius: 5px;
+      border-top: 7px solid brown;
+      border-bottom: 15px solid brown;
+      border-inline: 10px solid brown;
+      box-sizing: content-box;
+      position: relative;
+      /* overflow: hidden; */
+      box-shadow: 0 0 12px 5px black;
+    }
+
+    .buttons {
+      position: absolute;
+      width: 95%;
+      bottom: -12px;
+      left: 2%;
+      display: flex;
+      gap: 0.5rem;
+      z-index: 10;
+    }
+
+    #tv-preview {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 2px solid black;
+      border-radius: 5px;
+    }
+
+    #tv-preview.on {
+      /* overflow: hidden; */
+    }
+
+    #tv-preview.off {
+      /* display: none; */
+      background-color: black;
+      /* opacity: 0.5; */
+    }
+
+    .button {
+      width: 12px;
+      height: 10px;
+      border: 2px solid black;
+      border-radius: 50%;
+    }
+
+    .left {
+      background-color: #76885b;
+    }
+
+    .right {
+      background-color: #ff204e;
+    }
+
+    #base {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: -6px;
+    }
+
+    #tv-top-part {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    #antenna-img {
+      margin-bottom: -1.5px;
+    }
+
+    #antenna-img.on:hover {
+      animation: shake 0.5s;
+    }
+
+    #antenna-img.on {
+      filter: drop-shadow(0 0 3px yellowgreen);
+    }
+
+    .button.on-off {
+      background-color: #ff204e;
+      margin-left: auto;
+    }
+
+    #tv-info {
+      display: flex;
+    }
+
+    #tv {
+      margin-block: 0.8rem;
+    }
+
+    .hidden {
+      visibility: hidden;
+    }
+
+    @keyframes shake {
+      0% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(5deg);
+      }
+      50% {
+        transform: rotate(-5deg);
+      }
+      75% {
+        transform: rotate(5deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+  </style>
+  <main class='flex h-screen w-screen flex-col items-center justify-center p-4'>
+    <h1
+      class='fixed right-1 top-1 my-2 rounded bg-black/50 px-2 py-1 font-fredericka text-5xl text-gray-100'
+    >
+      BOARD
+    </h1>
+    <div id='tv'>
+      <div id='tv-top-part'>
+        <img
+          src='/svg/antenna.svg'
+          id='antenna-img'
+          width='30'
+          height='40'
+          alt='antenna'
+          class='off'
+        />
+      </div>
+      <div id='tv-frame'>
+        <img
+          src='/gif/static_noise.gif'
+          alt='custom-preview'
+          id='tv-preview'
+          class='off'
+        />
+        <div class='buttons'>
+          <button class='button left' id='prev-button'></button>
+          <button class='button right' id='next-button'></button>
+          <button class='button on-off'></button>
+        </div>
+      </div>
+    </div>
+    <aside id='tv-info'>
+      <span id='channel-info'> </span>
+    </aside>
   </main>
+  <script>
+    const videos = ['dIlUbb4VtzY', 'OxGsU8oIWjY', 'l_rVxAwiVvc', 'aolI_Rz0ZqY']
+    let index = 1
+    let onOff = true
+    const onOffButton = document.querySelector('.on-off')
+    const antenna = document.querySelector('#antenna-img')
+    const tvPreview = document.querySelector('#tv-preview') as HTMLImageElement
+    const prevButton = document.querySelector('#prev-button')
+    const nextButton = document.querySelector('#next-button')
+    const tvInfo = document.querySelector('#channel-info')
+    const tvFrame = document.querySelector('#tv-frame')
+    const youtubeFrame = document.createElement('iframe')
+    function toggleOnOff() {
+      // Antenna
+      if (antenna.classList.contains('on')) {
+        antenna.classList.remove('on')
+        antenna.classList.add('off')
+      } else {
+        antenna.classList.remove('off')
+        antenna.classList.add('on')
+      }
+      // TV
+      onOff = !onOff
+      if (!onOff) {
+        // hide tv preview
+        tvPreview.src = '/gif/static_noise.gif'
+        turnOff()
+      } else {
+        tvPreview.src = ''
+        turnOn()
+      }
+      updateChannelInfo()
+    }
+    function incrementIndex() {
+      index = (index + 1) % videos.length
+      updateChannelInfo()
+    }
+    function decrementIndex() {
+      index = (index - 1 + videos.length) % videos.length
+      updateChannelInfo()
+    }
+    function updateChannelInfo() {
+      updateTvPreview()
+      tvInfo.textContent = onOff
+        ? `Canal ${index + 1} - ${videos[index]}`
+        : 'El TV está apagado'
+    }
+    function turnOn() {
+      onOff = true
+      // insert frame
+      youtubeFrame.src = `https://www.youtube.com/embed/${videos[index]}?autoplay=0&controls=1&loop=1`
+      console.log('video', youtubeFrame.src)
+      youtubeFrame.width = '100%'
+      youtubeFrame.height = '100%'
+      youtubeFrame.allow =
+        'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+      youtubeFrame.allowFullscreen = true
+      youtubeFrame.style.border = 'none'
+      youtubeFrame.style.borderRadius = '5px'
+      youtubeFrame.style.overflow = 'hidden'
+      youtubeFrame.style.border = '2px solid black'
+      //
+      if (tvPreview && tvPreview.parentNode) {
+        tvPreview.parentNode.removeChild(tvPreview)
+      }
+      tvFrame.appendChild(youtubeFrame)
+    }
+    function turnOff() {
+      onOff = false
+      // insert frame
+      if (youtubeFrame && youtubeFrame.parentNode) {
+        youtubeFrame.parentNode.removeChild(youtubeFrame)
+      }
+      tvFrame.appendChild(tvPreview)
+    }
+    function updateTvPreview() {
+      if (onOff) {
+        turnOn()
+      } else {
+        turnOff()
+      }
+    }
+    toggleOnOff()
+    onOffButton.addEventListener('click', toggleOnOff)
+    prevButton.addEventListener('click', decrementIndex)
+    nextButton.addEventListener('click', incrementIndex)
+  </script>
 </Layout>

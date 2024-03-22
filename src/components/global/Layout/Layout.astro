@@ -46,6 +46,7 @@ import '@fontsource/poppins'
 import '@fontsource/bungee-shade'
 import '@fontsource/bungee-hairline'
 import '@fontsource/fira-mono'
+import '@fontsource/fredericka-the-great'
 
 // Code Styles
 import '@style/code.css'
@@ -225,17 +226,35 @@ import Ascii from '@ascii/elephant.txt?raw'
   </head>
   <body
     data-dev={import.meta.env.DEV}
-    class='flex max-h-screen w-screen flex-col overflow-x-hidden data-[dev]:debug-screens'
+    class='flex h-[100dvh] w-[100dvw] flex-col overflow-x-hidden data-[dev]:debug-screens'
   >
     <wc-toast class='w-180 mx-auto'></wc-toast>
     <Background />
     {import.meta.env.DEV && <Portal />}
     <main
-      class='flex max-h-screen w-screen flex-1 items-center justify-center
+      class='flex w-screen flex-1 items-center justify-center
       overflow-hidden'
     >
       <slot />
     </main>
+    {
+      !import.meta.env.DEV && (
+        <a
+          href='https://librecounter.org/referer/show'
+          target='_blank'
+          class='fixed bottom-1 right-1'
+        >
+          <img
+            src='https://librecounter.org/counter.svg'
+            referrerPolicy='unsafe-url'
+            alt='librecounter'
+            width='20'
+            height='20'
+            class='opacity-50 transition-opacity duration-300 hover:opacity-100'
+          />
+        </a>
+      )
+    }
     <script define:vars={{ Ascii }}>
       // This is a hack to get vite-plugin-pwa to generate a sw.js file.
       // Do not remove this script tag.

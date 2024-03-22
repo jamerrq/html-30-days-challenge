@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi primera Página Web 1105/1103</title>
+    <style>
+      *,
+      *::after,
+      *::before {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .noise::before {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        content: '';
+        /* you can control opacity of noise  */
+        opacity: 0.05;
+        z-index: 1000;
+        pointer-events: none;
+        background: url('https://cliply.co/wp-content/uploads/2021/07/402107790_STATIC_NOISE_400.gif');
+      }
+
+      body {
+        display: flex;
+        color: white;
+        flex-direction: column;
+        padding: 3rem;
+        font-family:
+          Fira Code,
+          Arial,
+          Helvetica,
+          sans-serif;
+        gap: 1rem;
+        background-color: black;
+      }
+
+      img {
+        width: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="noise"></div>
+    <h1>Encabezado Principal con Etiqueta H1</h1>
+    <p>
+      Párrafo de texto: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Dolore ipsa dolor autem earum blanditiis voluptas, illo eaque modi, rem
+      error nulla distinctio minus exercitationem harum ad ipsum necessitatibus
+      possimus natus.
+    </p>
+    <br />
+    <hr />
+    <b>Texto en negrita</b>
+    <i>Texto en cursiva</i>
+    <u>Texto subrayado</u>
+
+    <h2>Encabezado secundario con Etiqueta H2</h2>
+
+    <ol>
+      <li>Elemento de lista ordenada 1</li>
+      <li>Elemento de lista ordenada 2</li>
+    </ol>
+
+    <ul>
+      <li>Elemento de lista ordenada 1</li>
+      <li>Elemento de lista ordenada 2</li>
+    </ul>
+
+    <a
+      href="https://www.iecasdvalledupar.edu.co"
+      target="_blank"
+      rel="noopener"
+    >
+      Enlace a iecasdvalledupar.edu.co
+    </a>
+
+    <img
+      src="https://elpilon.com.co/wp-content/uploads/2024/01/IMG-20240122-WA0110-scaled.jpg"
+      alt="Descripción de la imagen"
+    />
+
+    <table border="1">
+      <tr>
+        <td>Celda 1</td>
+        <td>Celda 2</td>
+      </tr>
+      <tr>
+        <td>Celda 3</td>
+        <td>Celda 4</td>
+      </tr>
+    </table>
+    <!-- ESTE TEXTO ES UN COMENTARIO ES VISIBLE EN EL
+    EDITOR DE CÓDIGO PERO NO SE VE EN LA PÁGINA WEB -->
+    <p>Luz Estela Rebolledo Quiroz</p>
+  </body>
+</html>

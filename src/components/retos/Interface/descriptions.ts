@@ -8,7 +8,7 @@ export default {
   7: 'Coloca una imagen en formato JPEG-XL. Si el navegador no la soporta, que use AVIF. Sino, que use JPG.',
   8: 'Crear un párrafo de texto con palabras destacadas en diferentes colores.',
   9: 'Crea un pergamino con una lista de objetos, donde se numere con números romanos (mayúsculas).',
-  10: 'Inserta un video de Youtube en una página y estila con CSS para que se vea bien.',
+  10: 'Busca 5 videos de youtube. Inserta uno en la página. Haz que se pueda cambiar entre ellos como una TV. Dale estilo con CSS para que se vea más bonito.',
   11: 'Escribe un texto con super/subíndices (fórmulas químicas, por ejemplo).',
   12: 'Crea un slider que permita seleccionar un número entre 1-50 y lo muestre en vivo al cambiar.',
   13: 'Crea una barra medidora que muestre los tickets vendidos en un cine (64/100 tickets vendidos).',

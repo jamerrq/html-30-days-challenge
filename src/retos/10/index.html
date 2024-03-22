@@ -2,46 +2,146 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Reto 10</title>
+    <title>Reto #10</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <div class="youtube-player pristine" data-video-id="dQw4w9WgXcQ">
-      <img
-        src="https://pbs.twimg.com/media/GH3VaezW8AAiKjJ?format=png&name=small"
-        alt="custom-preview"
-      />
-    </div>
+    <main>
+      <div id="tv">
+        <div id="tv-top-part">
+          <img
+            src="/svg/antenna.svg"
+            id="antenna-img"
+            width="30"
+            height="40"
+            alt="antenna"
+            class="on"
+          />
+        </div>
+        <div id="tv-frame">
+          <img
+            src="/gif/static_noise.gif"
+            alt="custom-preview"
+            id="tv-preview"
+            class="off"
+          />
+          <div class="buttons">
+            <button class="button left" id="prev-button"></button>
+            <button class="button right" id="next-button"></button>
+            <!-- <button class="button" id="pause-resume-button"></button> -->
+            <button class="button on-off"></button>
+          </div>
+        </div>
+      </div>
+      <aside id="tv-info">
+        <span id="channel-info"> </span>
+      </aside>
+    </main>
     <script>
-      var players = document.querySelectorAll('.youtube-player')
-
-      var loadPlayer = function (event) {
-        var target = event.currentTarget
-        var iframe = document.createElement('iframe')
-
-        iframe.height = target.clientHeight
-        iframe.width = target.clientWidth
-        iframe.src =
-          'https://www.youtube.com/embed/' +
-          target.dataset.videoId +
-          '?autoplay=1'
-        iframe.setAttribute('frameborder', 0)
-
-        target.classList.remove('pristine')
-
-        if (target.children.length) {
-          target.replaceChild(iframe, target.firstElementChild)
+      const videos = [
+        'dIlUbb4VtzY',
+        'OxGsU8oIWjY',
+        'l_rVxAwiVvc',
+        'aolI_Rz0ZqY',
+        'mqJJLCqlWuw',
+        'uEL_mJ-pj5w'
+      ]
+      let index = Math.floor(Math.random() * videos.length)
+      let onOff = true
+      const onOffButton = document.querySelector('.on-off')
+      const antenna = document.querySelector('#antenna-img')
+      const tvPreview = document.querySelector('#tv-preview')
+      const prevButton = document.querySelector('#prev-button')
+      const nextButton = document.querySelector('#next-button')
+      const tvInfo = document.querySelector('#channel-info')
+      const tvFrame = document.querySelector('#tv-frame')
+      const youtubeFrame = document.createElement('iframe')
+      youtubeFrame.id = 'youtube-frame'
+      const pauseResumeButton = document.querySelector('#pause-resume-button')
+      function toggleOnOff() {
+        // Antenna
+        if (antenna.classList.contains('on')) {
+          antenna.classList.remove('on')
+          antenna.classList.add('off')
         } else {
-          target.appendChild(iframe)
+          antenna.classList.remove('off')
+          antenna.classList.add('on')
+        }
+        // TV
+        onOff = !onOff
+        if (!onOff) {
+          // hide tv preview
+          tvPreview.src = '/gif/static_noise.gif'
+          turnOff()
+        } else {
+          tvPreview.src = ''
+          turnOn()
+        }
+        updateChannelInfo()
+      }
+      function incrementIndex() {
+        index = (index + 1) % videos.length
+        updateChannelInfo()
+      }
+      function decrementIndex() {
+        index = (index - 1 + videos.length) % videos.length
+        updateChannelInfo()
+      }
+      function updateChannelInfo() {
+        updateTvPreview()
+        tvInfo.textContent = onOff
+          ? `Canal ${index + 1} - ${videos[index]}`
+          : 'El TV está apagado'
+      }
+      function turnOn() {
+        onOff = true
+        // insert frame
+        youtubeFrame.src = `https://www.youtube.com/embed/${videos[index]}?&autoplay=0&controls=1&loop=1`
+        youtubeFrame.allow =
+          'accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture'
+        youtubeFrame.allowFullscreen = true
+        //
+        if (tvPreview && tvPreview.parentNode) {
+          tvPreview.parentNode.removeChild(tvPreview)
+        }
+        tvFrame.appendChild(youtubeFrame)
+      }
+      function turnOff() {
+        onOff = false
+        // insert frame
+        if (youtubeFrame && youtubeFrame.parentNode) {
+          youtubeFrame.parentNode.removeChild(youtubeFrame)
+        }
+        tvFrame.appendChild(tvPreview)
+      }
+      function updateTvPreview() {
+        if (onOff) {
+          turnOn()
+        } else {
+          turnOff()
         }
       }
-
-      var config = { once: true }
-
-      Array.from(players).forEach(function (player) {
-        player.addEventListener('click', loadPlayer, config)
-      })
+      function stop() {
+        youtubeFrame.contentWindow.postMessage(
+          '{"event":"command", "func":"stopVideo", "args":""}',
+          '*'
+        )
+      }
+      // to pause the video
+      function pause() {
+        console.log(youtubeFrame)
+        youtubeFrame.contentWindow.postMessage(
+          '{"event":"command", "func":"pauseVideo", "args":""}',
+          '*'
+        )
+      }
+      function pauseResume() {}
+      toggleOnOff()
+      onOffButton.addEventListener('click', toggleOnOff)
+      prevButton.addEventListener('click', decrementIndex)
+      nextButton.addEventListener('click', incrementIndex)
+      pauseResumeButton.addEventListener('click', pause)
     </script>
   </body>
 </html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reto 13</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <!-- Crea una barra medidora que muestre los tickets vendidos en un cine (Ejemplo: 64/100 tickets vendidos). -->
+  <body>
+    <main>
+      <header>
+        <h1>Reto #13</h1>
+      </header>
+      <div id="meter">
+        <meter min="0" max="420" value="69" id="meter-input"></meter>
+        <output id="meter-output">69/420 tickets vendidos</output>
+      </div>
+    </main>
+    <script>
+      const meterInput = document.querySelector('#meter-input')
+      const meterOutput = document.querySelector('#meter-output')
+      meterInput.addEventListener('input', () => {
+        meterOutput.textContent = `${meterInput.value}/100 tickets vendidos`
+      })
+    </script>
+  </body>
+</html>

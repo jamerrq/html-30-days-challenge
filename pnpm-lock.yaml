@@ -17,6 +17,9 @@ dependencies:
   '@fontsource/fira-mono':
     specifier: ^5.0.12
     version: 5.0.12
+  '@fontsource/fredericka-the-great':
+    specifier: ^5.0.19
+    version: 5.0.19
   '@fontsource/poppins':
     specifier: ^5.0.12
     version: 5.0.12
@@ -2237,6 +2240,13 @@ packages:
     resolution:
       {
         integrity: sha512-1uFRjqCcxVv4F31PjyLm8o4oNlT5ywwh6OwcDGkZbafOeFZHXekvholS9IlfZkRsZvVhSbFRHT/5iDib4KTtpg==
+      }
+    dev: false
+
+  /@fontsource/fredericka-the-great@5.0.19:
+    resolution:
+      {
+        integrity: sha512-HW/Gl2uRFv6AQb56YTi1D/hwracm1Ng5zaHZRzdq46IJwWhEcfsWcVosteX7wIPiW3HXoFuGFQO5sQc+THng4w==
       }
     dev: false
 
