@@ -6,7 +6,7 @@ export default {
   theme: {
     fontFamily: {
       fredericka: ['Fredericka the Great', 'system-ui'],
-      firaMono: ['Fira Mono', 'monospace'],
+      firaMono: ['Fira Mono', 'monospace']
     },
     debugScreens: {
       style: {

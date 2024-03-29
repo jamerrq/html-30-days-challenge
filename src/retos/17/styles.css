@@ -1,110 +1,113 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: inherit;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: rgb(238, 174, 202);
-    background: radial-gradient(circle,
-            rgba(238, 174, 202, 1) 0%,
-            rgba(148, 187, 233, 1) 100%);
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  overflow: hidden;
 }
 
 .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    background: #ffffff66;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    padding: 20px;
-    min-width: 50%;
-    font-family: Fira Code;
-    gap: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background: #ffffff66;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding: 20px;
+  min-width: 50%;
+  font-family: Fira Code;
+  gap: 3px;
 }
 
 .card-title::before {
-    content: '@'
+  content: '@';
 }
 
 .card-avatar {
-    width: 128px;
-    height: 128px;
-    border-radius: 50%;
-    border: 5px solid #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .href-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    color: #000;
-    text-decoration: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
 }
 
 .href-icon img {
-    width: 32px;
-    height: 32px;
+  width: 32px;
+  height: 32px;
 }
 
 .href-icon img:hover {
-    animation: glow 0.5s infinite;
+  animation: glow 0.5s infinite;
 }
 
 .card {
-    --a: 8deg;
-    aspect-ratio: 1;
-    border-radius: 20px;
-    transform: perspective(400px) rotate3d(var(--r, 1, -1), 0, calc(var(--i, 1)*var(--a)));
-    mask: linear-gradient(135deg, #000c 40%, #000, #000c 60%);
-    -webkit-mask:
-        linear-gradient(135deg, #000c 40%, #000, #000c 60%) 100% 100%/250% 250%;
-    transition: .4s;
-    cursor: pointer;
+  --a: 8deg;
+  aspect-ratio: 1;
+  border-radius: 20px;
+  transform: perspective(400px)
+    rotate3d(var(--r, 1, -1), 0, calc(var(--i, 1) * var(--a)));
+  mask: linear-gradient(135deg, #000c 40%, #000, #000c 60%);
+  -webkit-mask: linear-gradient(135deg, #000c 40%, #000, #000c 60%) 100% 100%/250%
+    250%;
+  transition: 0.4s;
+  cursor: pointer;
 }
 
 .alt {
-    --r: 1, 1;
-    mask: linear-gradient(45deg, #000c 40%, #000, #000c 60%);
-    -webkit-mask:
-        linear-gradient(45deg, #000c 40%, #000, #000c 60%) 0 100%/250% 250%;
+  --r: 1, 1;
+  mask: linear-gradient(45deg, #000c 40%, #000, #000c 60%);
+  -webkit-mask: linear-gradient(45deg, #000c 40%, #000, #000c 60%) 0 100%/250%
+    250%;
 }
 
 .card:hover {
-    --i: -1;
-    mask-position: 0 0;
-    -webkit-mask-position: 0 0;
+  --i: -1;
+  mask-position: 0 0;
+  -webkit-mask-position: 0 0;
 }
 
 .alt:hover {
-    mask-position: 100% 0;
-    -webkit-mask-position: 100% 0;
+  mask-position: 100% 0;
+  -webkit-mask-position: 100% 0;
 }
 
 @keyframes glow {
-    0% {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 1);
-    }
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+  }
 
-    50% {
-        box-shadow: 0 0 20px rgba(255, 255, 255, 1);
-    }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+  }
 
-    100% {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 1);
-    }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+  }
 }

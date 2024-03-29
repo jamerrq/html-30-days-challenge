@@ -22,9 +22,7 @@ export default defineConfig({
         manifest,
         workbox: {
           globDirectory: 'dist',
-          globPatterns: [
-            '**/*.{js,css,woff2,ico}'
-          ],
+          globPatterns: ['**/*.{js,css,woff2,ico}'],
           // Don't fallback on document based (e.g. `/some-page`) requests
           // This removes an errant console.log message from showing up.
           navigateFallback: null
