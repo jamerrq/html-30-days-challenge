@@ -5,7 +5,8 @@ export default {
   content: ['./src/**/*.{astro,html,jsx,tsx,svelte,vue,js,ts}'],
   theme: {
     fontFamily: {
-      fredericka: ['Fredericka the Great', 'system-ui']
+      fredericka: ['Fredericka the Great', 'system-ui'],
+      firaMono: ['Fira Mono', 'monospace'],
     },
     debugScreens: {
       style: {

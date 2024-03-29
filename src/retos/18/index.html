@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reto 18</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <!-- Crea un pequeño artículo de prensa con una noticia inventada. Usa etiquetas HTML semánticas. -->
+  <body>
+    <style>
+      .article {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f999;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .article-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .article-text {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+
+      .article img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        max-width: 350px;
+      }
+
+      @media (max-width: 600px) {
+        .article {
+          padding: 10px;
+        }
+
+        .article-title {
+          font-size: 20px;
+        }
+
+        .article-text {
+          font-size: 14px;
+        }
+
+        .article img {
+          margin-bottom: 10px;
+          width: 40%;
+          margin: auto 0;
+        }
+      }
+
+      @media (max-width: 400px) {
+        .article-title {
+          font-size: 18px;
+        }
+
+        .article-text {
+          font-size: 12px;
+        }
+      }
+
+      @media (max-width: 300px) {
+        .article-title {
+          font-size: 16px;
+        }
+
+        .article-text {
+          font-size: 10px;
+        }
+      }
+    </style>
+    <article class="article">
+      <h2 class="article-title">Elon Musk lanza un nuevo cohete a Marte</h2>
+      <img
+        src="https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3Af4768265-8d86-4065-80f6-dbde898d61ff?source=next-article&fit=scale-down&quality=highest&width=1440&dpr=1"
+        alt="elon musk"
+      />
+      <p class="article-text">
+        El día de hoy, Elon Musk ha lanzado un nuevo cohete a Marte. Este cohete
+        es el más grande que se ha construido hasta la fecha y tiene la
+        capacidad de llevar a 100 personas a Marte en un solo viaje. Se espera
+        que el viaje dure aproximadamente 6 meses y que los pasajeros lleguen a
+        Marte en perfectas condiciones.
+      </p>
+      <p class="article-text">
+        Este cohete ha sido construido con tecnología de punta y se espera que
+        sea el primero de muchos viajes a Marte. Elon Musk ha declarado que su
+        objetivo es colonizar Marte y que este cohete es solo el primer paso en
+        esa dirección.
+      </p>
+      <p class="article-text">
+        Se espera que el cohete llegue a Marte en aproximadamente 2 años y que
+        los pasajeros puedan comenzar a explorar el planeta rojo en busca de
+        nuevos recursos y posibles lugares de colonización.
+      </p>
+    </article>
+  </body>
+</html>

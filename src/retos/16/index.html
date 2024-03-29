@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reto 16</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+  </head>
+  <body>
+    <div class="keyboard">
+      <span class="key key-letter" data-key="Control">
+        <span>CTRL</span>
+      </span>
+      <span class="key key-letter" data-key="Alt">
+        <span>ALT</span>
+      </span>
+      <span class="key key-letter" data-key="Delete">
+        <span>SUPR</span>
+      </span>
+    </div>
+    <div class="text" style="display: none">
+      <span> It's a party 🎉 </span>
+    </div>
+    <script>
+      const jsConfetti = new JSConfetti()
+      const text = document.querySelector('.text')
+      window.addEventListener('keydown', (event) => {
+        // add pressed class to key when pressed
+        const key = document.querySelector(`span[data-key=${event.key}]`)
+        if (key) key.classList.add('pressed')
+        if (event.ctrlKey && event.altKey && event.code === 'Delete') {
+          jsConfetti.addConfetti()
+          text.style.display = 'block'
+        }
+      })
+      window.addEventListener('keyup', (event) => {
+        const key = document.querySelector(`span[data-key=${event.key}]`)
+        if (key) key.classList.remove('pressed')
+      })
+    </script>
+  </body>
+</html>

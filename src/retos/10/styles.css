@@ -1,169 +1,170 @@
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: inherit;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: black;
-  overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+    overflow: hidden;
 }
 
 #tv-frame {
-  width: 400px;
-  height: 280px;
-  background-color: brown;
-  border-radius: 5px;
-  border-top: 7px solid brown;
-  border-bottom: 15px solid brown;
-  border-inline: 10px solid brown;
-  box-sizing: content-box;
-  position: relative;
-  box-shadow: 0 0 12px 5px black;
+    width: 400px;
+    height: 280px;
+    background-color: brown;
+    border-radius: 5px;
+    border-top: 7px solid brown;
+    border-bottom: 15px solid brown;
+    border-inline: 10px solid brown;
+    box-sizing: content-box;
+    position: relative;
+    box-shadow: 0 0 12px 5px black;
 }
 
 .buttons {
-  position: absolute;
-  width: 95%;
-  bottom: -12px;
-  left: 2%;
-  display: flex;
-  gap: 0.5rem;
-  z-index: 10;
+    position: absolute;
+    width: 95%;
+    bottom: -12px;
+    left: 2%;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10;
 }
 
 #tv-preview {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: 2px solid black;
-  border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
 #tv-preview.off {
-  background-color: black;
+    background-color: black;
 }
 
 .button {
-  width: 12px;
-  height: 10px;
-  border: 2px solid black;
-  border-radius: 50%;
-  cursor: pointer;
+    width: 12px;
+    height: 10px;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .left {
-  background-color: #76885b;
+    background-color: #76885b;
 }
 
 .right {
-  background-color: #ff204e;
+    background-color: #ff204e;
 }
 
 #base {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: -6px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -6px;
 }
 
 #tv-top-part {
-  display: flex;
-  flex-direction: row-reverse;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 #antenna-img {
-  margin-bottom: -1.5px;
+    margin-bottom: -1.5px;
 }
 
 #antenna-img.on:hover {
-  animation: shake 0.5s;
+    animation: shake 0.5s;
 }
 
 #antenna-img.on {
-  filter: drop-shadow(0 0 3px yellowgreen);
+    filter: drop-shadow(0 0 3px yellowgreen);
 }
 
 .button.on-off {
-  background-color: #ff204e;
-  margin-left: auto;
+    background-color: #ff204e;
+    margin-left: auto;
 }
 
 .button#pause-resume-button {
-  background-color: grey;
+    background-color: grey;
 }
 
 #tv-info {
-  display: flex;
-  color: white;
+    display: flex;
+    color: white;
 }
 
 #tv {
-  margin-block: 0.8rem;
+    margin-block: 0.8rem;
 }
 
 .hidden {
-  visibility: hidden;
+    visibility: hidden;
 }
 
 #youtube-frame {
-  width: 100%;
-  height: 100%;
-  border-style: none;
-  border-radius: 5px;
-  overflow: hidden;
-  border: 2px solid black;
+    width: 100%;
+    height: 100%;
+    border-style: none;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px solid black;
 }
 
 @keyframes shake {
-  0% {
-    transform: rotate(0deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
 
-  25% {
-    transform: rotate(5deg);
-  }
+    25% {
+        transform: rotate(5deg);
+    }
 
-  50% {
-    transform: rotate(-5deg);
-  }
+    50% {
+        transform: rotate(-5deg);
+    }
 
-  75% {
-    transform: rotate(5deg);
-  }
+    75% {
+        transform: rotate(5deg);
+    }
 
-  100% {
-    transform: rotate(0deg);
-  }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 @media (max-width: 420px) {
-  #tv-frame {
-    width: 200px;
-    height: 210px;
-  }
+    #tv-frame {
+        width: 200px;
+        height: 210px;
+    }
 
-  #tv-preview {
-    width: 100%;
-    height: 100%;
-  }
+    #tv-preview {
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+    }
 
-  #base {
-    width: 100%;
-  }
+    #base {
+        width: 100%;
+    }
 
-  #tv {
-    margin-block: 0.5rem;
-  }
+    #tv {
+        margin-block: 0.5rem;
+    }
 
-  .buttons {
-    width: 100%;
-  }
+    .buttons {
+        width: 100%;
+    }
 }

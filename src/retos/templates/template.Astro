@@ -2,6 +2,12 @@
 import { Interface } from '@retos'
 import htmlRaw from 'src/retos/#N/index.html?raw'
 import cssRaw from 'src/retos/#N/styles.css?raw'
+import { completed } from '../../index'
 ---
 
-<Interface htmlRaw={htmlRaw} cssRaw={cssRaw} index={#N} />
+<Interface
+  htmlRaw={htmlRaw}
+  cssRaw={cssRaw}
+  index={#N}
+  last={#N == completed}
+/>

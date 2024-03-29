@@ -1,1 +1,1 @@
-export const completed = 15
+export const completed: number = 20

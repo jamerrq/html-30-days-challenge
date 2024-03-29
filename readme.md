@@ -4,7 +4,7 @@
 
 [![alt text](public/app.png)](https://html-30-days-challenge.vercel.app/)
 
-![progres-bar](https://progress-bar.dev/33/?title=completed&width=350)
+![progres-bar](https://progress-bar.dev/67/?title=completed&width=350)
 
 ## Powered by
 
@@ -39,3 +39,4 @@ https://lenguajehtml.com/challenge/
 - [Nu HTML Checker](https://validator.w3.org/nu/)
 - [JPEG XL Viewer (Chromium Extension)](https://chromewebstore.google.com/detail/jpeg-xl-viewer/bkhdlfmkaenamnlbpdfplekldlnghchp)
 - [Pre Tag MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre)
+- [Shines, Perspective, And Rotations: Fancy CSS 3D Effects For Images](https://www.smashingmagazine.com/2023/07/shines-perspective-rotations-css-3d-effects-images/)
