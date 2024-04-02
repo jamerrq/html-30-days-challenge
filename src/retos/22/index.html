@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reto 22</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+  </head>
+  <!--
+    En la lista anterior, permite al usuario introducir opciones personalizadas
+    (no sólo las de la lista) y filtrar las opciones existentes.
+  -->
+  <body>
+    <wc-toast></wc-toast>
+    <form>
+      <div class="left-side">
+        <label for="products">Choose your warrior</label>
+        <select id="products" name="products" multiple>
+          <optgroup label="Beginner">
+            <option value="1">Python</option>
+            <option value="2">JavaScript</option>
+            <option value="3">HTML</option>
+          </optgroup>
+          <optgroup label="Intermediate">
+            <option value="4">TypeScript</option>
+            <option value="5">CSS</option>
+            <option value="6">React</option>
+          </optgroup>
+          <optgroup label="Advanced">
+            <option value="7">Node.js</option>
+            <option value="8">Php</option>
+            <option value="9">Java/Rust</option>
+          </optgroup>
+        </select>
+      </div>
+      <aside>
+        <input type="text" id="newProduct" name="newProduct" />
+        <!-- Choose Category -->
+        <select id="category" name="category">
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+        <button type="button" id="addProduct">Add product</button>
+        <label for="filter">Filter:</label>
+        <input type="text" id="filter" name="filter" />
+      </aside>
+    </form>
+    <script>
+      const products = document.getElementById('products')
+      const newProduct = document.getElementById('newProduct')
+      const addProduct = document.getElementById('addProduct')
+      const filter = document.getElementById('filter')
+      const category = document.getElementById('category')
+      const beginner = document.querySelector('optgroup[label="Beginner"]')
+      const intermediate = document.querySelector(
+        'optgroup[label="Intermediate"]'
+      )
+      const advanced = document.querySelector('optgroup[label="Advanced"]')
+
+      addProduct.addEventListener('click', () => {
+        const option = document.createElement('option')
+        option.value = products.options.length + 1
+        option.text = newProduct.value
+        switch (category.value) {
+          case 'Beginner':
+            beginner.appendChild(option)
+            break
+          case 'Intermediate':
+            intermediate.appendChild(option)
+            break
+          case 'Advanced':
+            advanced.appendChild(option)
+            break
+        }
+        newProduct.value = ''
+        Toastify({
+          text: 'Product added',
+          duration: 3000,
+          close: true,
+          gravity: 'top',
+          position: 'right',
+          style: {
+            background: 'linear-gradient(to right, #00b09b, #96c93d)'
+          }
+        }).showToast()
+      })
+
+      filter.addEventListener('input', () => {
+        const value = filter.value.toLowerCase()
+        Array.from(products.options).forEach((option) => {
+          option.hidden = !option.text.toLowerCase().includes(value)
+        })
+      })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  </body>
+</html>

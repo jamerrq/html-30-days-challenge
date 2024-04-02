@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reto 24</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <!--
+    Crea un formulario de registro que valide si el username escrito es válido
+    (sólo letras y números) o no.
+  -->
+  <body>
+    <form>
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        pattern="[a-zA-Z0-9]+"
+        title="Only letters and numbers are allowed"
+      />
+      <button type="submit">Register</button>
+    </form>
+  </body>
+</html>
