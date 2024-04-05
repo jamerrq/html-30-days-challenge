@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reto 29</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <!--
+    Instrucciones:
+    Crea un sistema de pestañas (tabs) para mostrar información. Necesita algo de Javascript.
+   -->
+  <body>
+    <div class="tabs">
+      <button class="tab" data-tab="tab1">HTML</button>
+      <button class="tab" data-tab="tab2">CSS</button>
+      <button class="tab" data-tab="tab3">JS</button>
+    </div>
+    <div class="tab-content" id="tab1">
+      <img
+        src="https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-html-5-256.png"
+        alt="html logo"
+      />
+    </div>
+    <div class="tab-content" id="tab2">
+      <img
+        src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/121-css3-256.png"
+        alt="css logo"
+      />
+    </div>
+    <div class="tab-content" id="tab3">
+      <img
+        src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/187_Js_logo_logos-256.png"
+        alt="js logo"
+      />
+    </div>
+    <script>
+      const tabs = document.querySelectorAll('.tab')
+      const tabContents = document.querySelectorAll('.tab-content')
+
+      tabs.forEach((tab) => {
+        tab.onclick = () => {
+          tabContents.forEach((tabContent) => {
+            tabContent.classList.remove('active')
+          })
+
+          const tabId = tab.getAttribute('data-tab')
+          const tabContent = document.getElementById(tabId)
+          tabContent.classList.add('active')
+        }
+      })
+    </script>
+  </body>
+</html>

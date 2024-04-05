@@ -9,6 +9,79 @@
     Crea una galería de fotos. Asegúrate que no se cargan si están fuera de la región visible del navegador.
    -->
   <body>
+    <style>
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: inherit;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: rgb(238, 174, 202);
+        background: radial-gradient(
+          circle,
+          rgba(238, 174, 202, 1) 0%,
+          rgba(148, 187, 233, 1) 100%
+        );
+        /* overflow: hidden; */
+      }
+
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: gray white;
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+          clip-path: inset(45% 20% 45% 20%);
+        }
+
+        to {
+          opacity: 1;
+          clip-path: inset(0% 0% 0% 0%);
+        }
+      }
+
+      .revealing-image {
+        view-timeline-name: --revealing-image;
+        view-timeline-axis: block;
+        animation: linear reveal both;
+        animation-timeline: --revealing-image;
+        animation-range: entry 25% cover 50%;
+        overflow: hidden;
+      }
+
+      .gallery {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: 25%;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        display: none;
+      }
+
+      .revealing-image {
+        width: 25%;
+        margin: 0 auto;
+      }
+
+      /* .spacer {
+        height: 100vh;
+      } */
+    </style>
     <div class="gallery">
       <img
         src="https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/355489964_695973822540259_2258211435746912090_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=oSGkTKZrA2EAX8qsRM-&_nc_ht=scontent.fbga2-1.fna&oh=00_AfD45ShkXMhnV844kUsYn_Jm-RKlIsHmW6E2yDT4Q1PIsQ&oe=661209F4"

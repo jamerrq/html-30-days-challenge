@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reto 28</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button id="open-modal">Otro mensaje para ti</button>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>
+          Visita
+          <a href=" https://lenguajejs.com/malaspracticas/" target="_blank"
+            >https://lenguajejs.com/malaspracticas/</a
+          >
+        </p>
+      </div>
+    </div>
+    <script>
+      const modal = document.getElementById('modal')
+      const openModal = document.getElementById('open-modal')
+      const closeModal = document.querySelector('.close')
+
+      openModal.onclick = () => {
+        modal.style.display = 'flex'
+      }
+
+      closeModal.onclick = () => {
+        modal.style.display = 'none'
+      }
+    </script>
+  </body>
+</html>

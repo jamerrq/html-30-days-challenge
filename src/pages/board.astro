@@ -126,125 +126,219 @@ import { Layout } from '@component/global'
     }
   </style>
   <main class='flex h-screen w-screen flex-col items-center justify-center p-4'>
-    <h1
-      class='fixed right-1 top-1 my-2 rounded bg-black/50 px-2 py-1 font-fredericka text-5xl text-gray-100'
-    >
-      BOARD
-    </h1>
-    <div id='tv'>
-      <div id='tv-top-part'>
-        <img
-          src='/svg/antenna.svg'
-          id='antenna-img'
-          width='30'
-          height='40'
-          alt='antenna'
-          class='off'
-        />
-      </div>
-      <div id='tv-frame'>
-        <img
-          src='/gif/static_noise.gif'
-          alt='custom-preview'
-          id='tv-preview'
-          class='off'
-        />
-        <div class='buttons'>
-          <button class='button left' id='prev-button'></button>
-          <button class='button right' id='next-button'></button>
-          <button class='button on-off'></button>
-        </div>
-      </div>
+    <div class='gallery'>
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/355489964_695973822540259_2258211435746912090_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=oSGkTKZrA2EAX8qsRM-&_nc_ht=scontent.fbga2-1.fna&oh=00_AfD45ShkXMhnV844kUsYn_Jm-RKlIsHmW6E2yDT4Q1PIsQ&oe=661209F4'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/355366981_695973852540256_354701398052868160_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=UXGpW_6qq00AX97Rads&_nc_ht=scontent.fbga2-1.fna&oh=00_AfDwKFrO8RxINwnscovPOGxaM1JLAchHOBtNclyq8nnSXw&oe=66122EBA'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/356111992_695973885873586_2132843017694635424_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=5IhqoPMdH8EAX8QbrO0&_nc_ht=scontent.fbga2-1.fna&oh=00_AfAZDbxr-9cEGqcvYaF-e_IrKGbFA_s1uZB5HWEhAIH3ig&oe=6612317D'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/355694413_695973925873582_584178772431225231_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=FkSrT0KSYuIAX8DA4ff&_nc_ht=scontent.fbga2-1.fna&oh=00_AfCrCVhicPW-ADJNLJ3r_oCueaeHIm9d-6w-86JZ_OTPSw&oe=661207BD'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/356090778_695973955873579_5872149919566222049_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=4nrLKpmTS0QAX_t0rYx&_nc_ht=scontent.fbga2-1.fna&oh=00_AfCfDx5A7KcpDOrkNJanJJOdcDoo1tjKLFVE_-jNydoCnw&oe=66121336'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/356134823_695973995873575_2578026086415267683_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=4bmZPUmDo80AX822WkL&_nc_ht=scontent.fbga2-1.fna&oh=00_AfDhd8UgQZtyiryy58ewfJqlj4PwYHrtS-eKocFNwCehNw&oe=66120E96'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/356112034_695974039206904_3976414510805944128_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=26_HMmWmhFMAX9UHNTe&_nc_ht=scontent.fbga2-1.fna&oh=00_AfCWP6FzcSLR9_KilsCsaMNaS0wH6a-mXyxtwBOiEYGhzQ&oe=66122557'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/355884223_695974075873567_282927326305264787_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ybUanSTwJn8AX8yAdkp&_nc_ht=scontent.fbga2-1.fna&oh=00_AfARKLxDFaobC8wMp7aVoC715zjWvqyR73tUoYSv5JHlvg&oe=66122A0A'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/355486536_695974119206896_4866090773600672214_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=w9peiEg1IOsAX8Dabca&_nc_ht=scontent.fbga2-1.fna&oh=00_AfC8zr1pilyXUosGlNCijRxFYTV8VZ3dxbTFWf8slIhU3Q&oe=661213B9'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/356129409_695974149206893_1148863868179104394_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=8SKqZw7hlbEAX8ylD4_&_nc_ht=scontent.fbga2-1.fna&oh=00_AfAKDP0S5YM8xxt0_HtPhlIYxGoHxWTowQcUBd5XSxW9-Q&oe=6612263C'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/356036687_695974182540223_4554981323670917134_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=QcmRu97DlQIAX--Lndk&_nc_ht=scontent.fbga2-1.fna&oh=00_AfB-OOjx4iQBmEVtmiHFJw__aZcY7SsHm4JIMxgrPZxc0Q&oe=6611FC23'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/355858966_695974212540220_40529364889666521_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=7rQ1fNotS6wAX9DxY5j&_nc_ht=scontent.fbga2-1.fna&oh=00_AfCZxzPd81iDZbLVOvf_pxrtD7R0_z668PYeSv5r257X3A&oe=66121DA2'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/356252399_695974245873550_7316406014233553699_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=5KinQ-nM6BwAX9al5QB&_nc_ht=scontent.fbga2-1.fna&oh=00_AfD7el-DXOQi_0qF5n7BTPgPLr6tf6H01LmGdFwR1j5sVQ&oe=66120E4A'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/355474193_695974282540213_4192194989176626607_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=O_18jdVC1O8AX-GdJLM&_nc_ht=scontent.fbga2-1.fna&oh=00_AfCy6KpfgIH15ECcXuOhweG0uA6RuiES3g_R59V8_AaNGw&oe=66120CE7'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/356250991_695974322540209_2507860237167857544_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=pVFQvJOksq4AX9tgR7D&_nc_ht=scontent.fbga2-1.fna&oh=00_AfBwljGQ2Ghiv557oLRDCJsKb3vtieOc3XIc6n6gThG5Fw&oe=661219C2'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/355691459_695974382540203_4631531084802521225_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=4yWLklBPLlcAX86yJPu&_nc_ht=scontent.fbga2-1.fna&oh=00_AfBqBj_aV7y1rHyxWy1QgNCsorkp7TeQfWN7e8Rfk7VHgQ&oe=66120DF1'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/356142673_695974422540199_4730228389067988457_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=6vR0DSLUVkkAX_OjIsQ&_nc_ht=scontent.fbga2-1.fna&oh=00_AfAhwJ-jzYskyVj_eGQA9tu2mK1k6Qgo7Mc6dSNQUevvKw&oe=661215F1'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/355693673_695974489206859_7419863295091842507_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=wX6ycqBdZU4AX_JZXd_&_nc_ht=scontent.fbga2-1.fna&oh=00_AfBWGTnaCJ7RuwHVIe1-DvBwJk5pUc39YfyDIH57ABmGGQ&oe=66122199'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <!--  -->
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/355482582_695974542540187_5636122472727241289_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=-q1qNaI1DAMAX_KGRXm&_nc_ht=scontent.fbga2-1.fna&oh=00_AfDNIzzl-BmstVSFsaWF7ocNvjHbIssm2_0EGcjufw6rtA&oe=661230DD'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/355480882_695974589206849_2135202548017635725_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=M5WpXEL-t0EAX-iYt-0&_nc_ht=scontent.fbga2-1.fna&oh=00_AfBjng6wZ_7TavPz0gSqWI-t0X0wXB8yMEfoXx3DHDghpQ&oe=66121ABD'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/355880729_695974639206844_6576188478515267852_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=H-kOnA3mn4QAX8zYwsP&_nc_ht=scontent.fbga2-1.fna&oh=00_AfAMrS1nZTu_mFPbCyUo3QEBoIBPEJ3m1m59ygI9iOWRKw&oe=66120C63'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/355681465_695974812540160_2185261388583916329_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=HpfVG-KbZZsAX-SxvCl&_nc_ht=scontent.fbga2-1.fna&oh=00_AfCqlQq08qKhTjLEPOUwdoBbRrWS8q8mRNFei0xNBL6eEw&oe=6612286A'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/353840399_695975322540109_266050691525150601_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=-E89Ql4KNEwAX8-LTrE&_nc_oc=AdhWqpoyNV-Y7Tvw0HqoHzErykLviqoVseyXuSDWDKMmEYHGEzGV3Ca28DZPg-nLQ3KNaY4IMPqvcRkEEpmqACd6&_nc_ht=scontent.fbga2-1.fna&oh=00_AfAcQvhQ6n7BDtgBlMLeqjiA7V_NMrdhMYQ-pL0rpmhYBA&oe=661215E9'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/353814767_695975399206768_9055201611958416156_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VTKcMsKFF-YAX-pIaRu&_nc_ht=scontent.fbga2-1.fna&oh=00_AfCnLU6uHYGosH8-mB96AlobpKl_c1bGpXoLnPzu3EcEsQ&oe=66121B0C'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/354249988_695975592540082_8083554000764335392_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=K7l8NEhkSZQAX9cectm&_nc_ht=scontent.fbga2-1.fna&oh=00_AfCCAbuiCiOeceKz5O9daytv_-2LPTEFIjSF5-f4fvELow&oe=66120D7D'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/353826211_695975602540081_704294901100264234_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=U4hk1w10hXoAX8_iZLG&_nc_ht=scontent.fbga2-1.fna&oh=00_AfBhkdeqJfCFe8tSaafPD803sQxWceMKAmV_2IbCq941hg&oe=66121C9A'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/355482644_695975682540073_987572445682259259_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=oMJte_57DBYAX88eIbX&_nc_ht=scontent.fbga2-1.fna&oh=00_AfBOzigbvqUSs910No4MlHmFRdDqn1JhxgYuoR954e57eQ&oe=66120887'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/353858228_695975692540072_2857106645754324424_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=kjSTaOdIK1IAX-I7Npp&_nc_ht=scontent.fbga2-1.fna&oh=00_AfDHUus2Yulj4PaWh_l80KyqcV2MPxjsZVOD0v6Cg0wf1g&oe=66120D52'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/353838422_695975705873404_7431969504818843023_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ucveYZKISN4AX8qUeN_&_nc_ht=scontent.fbga2-1.fna&oh=00_AfDhyLOF3_CWT2l8SbrRkj58tfWyqtcIdjGw3XAi6sKgcw&oe=66123292'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/353826825_695975722540069_2452765746834987958_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=IKhk5RvOLxsAX_K5g17&_nc_ht=scontent.fbga2-1.fna&oh=00_AfDJkOXsBSB3n532IS7jtku9l3owmmtFxF7voHaUdN9LVw&oe=66122DE2'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/355481831_695975755873399_5379272749178005062_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=lgwungE_Q3AAX8dcoIe&_nc_ht=scontent.fbga2-1.fna&oh=00_AfCdQcqlCqJRBz30U584LV1LWr1YMqVHL2NUxltxplsQaQ&oe=661204C9'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/354050615_695975775873397_3037136032973830456_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=0M6ljKeG4EkAX_Tvq5U&_nc_ht=scontent.fbga2-1.fna&oh=00_AfCZ6EgK7erIiak9IajCB7cRfzyRmQdj8yc0bCZCqrfMBg&oe=66122ED4'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/355521363_695975809206727_5617986558935432634_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=-oOFysQKpO0AX-1uVfI&_nc_ht=scontent.fbga2-1.fna&oh=00_AfCcRv7Kg94CUjkoDF8kDL9X7CBj3RT-N9fm-CK7j1w1HQ&oe=661215E7'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/354041479_695976015873373_1868938277522142247_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=fDo641Thuu8AX94xZC1&_nc_ht=scontent.fbga2-1.fna&oh=00_AfC-pqaM7qf-AMVhswCbmSe3mBrbpChK60fI_zQ_r41u9w&oe=66121B0A'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <img
+        src='https://scontent.fbga2-1.fna.fbcdn.net/v/t39.30808-6/354063691_695976035873371_7015407731682550167_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=wDiIM6LRRywAX-yXHfg&_nc_ht=scontent.fbga2-1.fna&oh=00_AfArW6HgfrZ-a3Dp8FgLr1RPDYWyrQ7ds9xpAB899mM0Sg&oe=66122FA2'
+        alt='Placeholder'
+        loading='lazy'
+        class='revealing-image'
+      />
+      <div class='spacer'></div>
     </div>
-    <aside id='tv-info'>
-      <span id='channel-info'> </span>
-    </aside>
   </main>
-  <script>
-    const videos = ['dIlUbb4VtzY', 'OxGsU8oIWjY', 'l_rVxAwiVvc', 'aolI_Rz0ZqY']
-    let index = 1
-    let onOff = true
-    const onOffButton = document.querySelector('.on-off')
-    const antenna = document.querySelector('#antenna-img')
-    const tvPreview = document.querySelector('#tv-preview') as HTMLImageElement
-    const prevButton = document.querySelector('#prev-button')
-    const nextButton = document.querySelector('#next-button')
-    const tvInfo = document.querySelector('#channel-info')
-    const tvFrame = document.querySelector('#tv-frame')
-    const youtubeFrame = document.createElement('iframe')
-    function toggleOnOff() {
-      // Antenna
-      if (antenna.classList.contains('on')) {
-        antenna.classList.remove('on')
-        antenna.classList.add('off')
-      } else {
-        antenna.classList.remove('off')
-        antenna.classList.add('on')
-      }
-      // TV
-      onOff = !onOff
-      if (!onOff) {
-        // hide tv preview
-        tvPreview.src = '/gif/resized_noise.gif'
-        turnOff()
-      } else {
-        tvPreview.src = ''
-        turnOn()
-      }
-      updateChannelInfo()
-    }
-    function incrementIndex() {
-      index = (index + 1) % videos.length
-      updateChannelInfo()
-    }
-    function decrementIndex() {
-      index = (index - 1 + videos.length) % videos.length
-      updateChannelInfo()
-    }
-    function updateChannelInfo() {
-      updateTvPreview()
-      tvInfo.textContent = onOff
-        ? `Canal ${index + 1} - ${videos[index]}`
-        : 'El TV está apagado'
-    }
-    function turnOn() {
-      onOff = true
-      // insert frame
-      youtubeFrame.src = `https://www.youtube.com/embed/${videos[index]}?autoplay=0&controls=1&loop=1`
-      console.log('video', youtubeFrame.src)
-      youtubeFrame.width = '100%'
-      youtubeFrame.height = '100%'
-      youtubeFrame.allow =
-        'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-      youtubeFrame.allowFullscreen = true
-      youtubeFrame.style.border = 'none'
-      youtubeFrame.style.borderRadius = '5px'
-      youtubeFrame.style.overflow = 'hidden'
-      youtubeFrame.style.border = '2px solid black'
-      //
-      if (tvPreview && tvPreview.parentNode) {
-        tvPreview.parentNode.removeChild(tvPreview)
-      }
-      tvFrame.appendChild(youtubeFrame)
-    }
-    function turnOff() {
-      onOff = false
-      // insert frame
-      if (youtubeFrame && youtubeFrame.parentNode) {
-        youtubeFrame.parentNode.removeChild(youtubeFrame)
-      }
-      tvFrame.appendChild(tvPreview)
-    }
-    function updateTvPreview() {
-      if (onOff) {
-        turnOn()
-      } else {
-        turnOff()
-      }
-    }
-    toggleOnOff()
-    onOffButton.addEventListener('click', toggleOnOff)
-    prevButton.addEventListener('click', decrementIndex)
-    nextButton.addEventListener('click', incrementIndex)
-  </script>
 </Layout>

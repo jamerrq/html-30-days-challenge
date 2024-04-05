@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reto 26</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <!--
+    Instrucciones:
+    Crea un mensaje emergente al pulsar un botón, que desaparezca al pulsar
+    fuera del mensaje.
+  -->
+  <body>
+    <button id="myBtn">
+      <span> Tengo un mensaje para ti </span>
+    </button>
+
+    <div id="modal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <p>Usa Linux</p>
+        <span class="close">&times;</span>
+      </div>
+    </div>
+    <script>
+      const modal = document.getElementById('modal')
+      const btn = document.getElementById('myBtn')
+      const span = document.getElementsByClassName('close')[0]
+
+      btn.onclick = function () {
+        modal.style.display = 'flex'
+      }
+
+      span.onclick = function () {
+        modal.style.display = 'none'
+      }
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = 'none'
+        }
+      }
+    </script>
+  </body>
+</html>
