@@ -22,5 +22,5 @@
       "@/*": ["src/*"]
     }
   },
-  "exclude": ["dist"]
+  "exclude": ["dist", "dev-dist"]
 }

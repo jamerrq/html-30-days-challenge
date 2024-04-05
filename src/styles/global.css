@@ -1,0 +1,28 @@
+@import url(https://unpkg.com/css-peeps@1/css-peeps.compat.css);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+}
+
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+iframe {
+  border: none;
+}
+
+#title {
+  font-family: 'Bungee Shade', system-ui;
+}
+
+#subtitle,
+#jamerrq,
+#manz {
+  font-family: 'Bungee Hairline', system-ui;
+}

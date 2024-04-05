@@ -2,7 +2,7 @@
 
 # HTML 30-day challenge
 
-[![alt text](public/app.png)](https://html-30-days-challenge.vercel.app/)
+[![app preview](public/app2.png)](https://html-30-days-challenge.vercel.app/)
 
 ![progres-bar](https://progress-bar.dev/100/?title=completed&width=350)
 

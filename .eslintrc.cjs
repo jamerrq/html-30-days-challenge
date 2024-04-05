@@ -7,6 +7,7 @@ module.exports = {
     sourceType: 'module',
     ecmaVersion: 'latest'
   },
+  ignorePatterns: ['dist', 'node_modules', 'dev-dist'],
   overrides: [
     {
       files: ['*.astro'],

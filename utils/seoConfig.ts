@@ -9,10 +9,10 @@ export const seoConfig = {
   description: '30 retos de HTML por ManzDev',
   type: 'website',
   image: {
-    url: 'https://html-30-days-challenge.vercel.app/app.png',
+    url: 'https://html-30-days-challenge.vercel.app/app2.png',
     alt: 'Site preview',
-    width: 1366,
-    height: 748
+    width: 960,
+    height: 720
   },
   siteName: '30 días de HTML con ManzDev',
   twitter: {

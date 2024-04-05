@@ -4,6 +4,7 @@ import { SEO, TwitterCardType } from 'astro-seo'
 
 // Style imports
 import '@style/tailwind.css'
+import '@style/global.css'
 
 // Helper imports
 import { seoConfig } from '@util/seoConfig'
@@ -55,6 +56,9 @@ import '@style/code.css'
 import { ViewTransitions } from 'astro:transitions'
 
 import Ascii from '@ascii/elephant.txt?raw'
+
+// @ts-ignore
+import { pwaInfo } from 'virtual:pwa-info'
 ---
 
 <html lang='en'>
@@ -170,44 +174,7 @@ import Ascii from '@ascii/elephant.txt?raw'
     <meta name='theme-color' content='#333' />
 
     <!-- Service worker registration. -->
-    {
-      !import.meta.env.DEV && (
-        <>
-          <script is:inline src='/registerSW.js' />
-          <link rel='manifest' href='/manifest.webmanifest' />
-        </>
-      )
-    }
-
-    <style is:global>
-      /* Global styles here */
-      @import url(https://unpkg.com/css-peeps@1/css-peeps.compat.css);
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-        font-family: inherit;
-      }
-
-      * {
-        font-family: 'Source Sans Pro', sans-serif;
-      }
-
-      iframe {
-        border: none;
-      }
-
-      #title {
-        font-family: 'Bungee Shade', system-ui;
-      }
-      #subtitle,
-      #jamerrq,
-      #manz {
-        font-family: 'Bungee Hairline', system-ui;
-      }
-    </style>
+    <link rel='manifest' href='/manifest.webmanifest' />
     <script
       is:inline
       src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js'
@@ -246,7 +213,7 @@ import Ascii from '@ascii/elephant.txt?raw'
         >
           <img
             src='https://librecounter.org/counter.svg'
-            referrerPolicy='unsafe-url'
+            referrerpolicy='unsafe-url'
             alt='librecounter'
             width='20'
             height='20'
@@ -260,5 +227,10 @@ import Ascii from '@ascii/elephant.txt?raw'
       // Do not remove this script tag.
       console.log(Ascii)
     </script>
+    <script src='/src/pwa.ts'></script>
+    {
+      // eslint-disable-next-line
+      pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />
+    }
   </body>
 </html>

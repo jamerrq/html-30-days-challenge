@@ -18,9 +18,9 @@
     "@midudev/tailwind-animations": "^0.0.7",
     "@typescript-eslint/eslint-plugin": "^7.1.1",
     "@typescript-eslint/parser": "^7.1.1",
+    "@vite-pwa/astro": "^0.3.1",
     "astro": "4.4.13",
     "astro-auto-import": "^0.4.2",
-    "astro-compress": "^2.2.11",
     "astro-mdx-code-blocks": "^0.0.6",
     "astro-seo": "^0.8.3",
     "eslint": "^8.57.0",
@@ -32,22 +32,15 @@
     "prettier-plugin-astro": "^0.13.0",
     "prettier-plugin-tailwindcss": "^0.5.12",
     "tailwindcss-debug-screens": "^2.2.1",
-    "typescript": "^5.4.2",
-    "vite-plugin-pwa": "^0.19.2"
+    "typescript": "^5.4.2"
   },
   "dependencies": {
-    "@astrojs/react": "^3.0.10",
     "@fontsource/bungee-hairline": "^5.0.19",
     "@fontsource/bungee-shade": "^5.0.19",
     "@fontsource/fira-mono": "^5.0.12",
     "@fontsource/fredericka-the-great": "^5.0.19",
     "@fontsource/poppins": "^5.0.12",
     "@fontsource/source-sans-pro": "^5.0.8",
-    "@types/react": "^18.2.64",
-    "@types/react-dom": "^18.2.21",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-syntax-highlighter": "^15.5.0",
     "wc-toast": "^1.3.1"
   },
   "type": "module"
